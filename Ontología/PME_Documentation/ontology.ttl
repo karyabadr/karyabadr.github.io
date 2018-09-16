@@ -1,0 +1,1710 @@
+@prefix : <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology##> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#> .
+
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#> rdf:type owl:Ontology ;
+                                                                       owl:imports <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl> ;
+                                                                       <http://purl.org/dc/terms/hasVersion> "1.0"@es ;
+                                                                       <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by-nc-sa/2.0/"^^xsd:string ;
+                                                                       <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasAuthor> "Área Hackers Cívics"@es ;
+                                                                       rdfs:comment "Ontología que modela elementos de un pleno municipal"@es ;
+                                                                       rdfs:label "Sesiones de Plenos Municipales"@es .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#sameAs
+owl:sameAs rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://dbpedia.org/ontology#isPartOf
+<http://dbpedia.org/ontology#isPartOf> rdf:type owl:ObjectProperty ;
+                                       owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#hasPart> ;
+                                       rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento> ;
+                                       rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Expediente> ;
+                                       rdfs:comment "propiedad para relacionar el todo con sus partes"@es ;
+                                       rdfs:label "es parte de"@es .
+
+
+###  http://purl.org/dc/terms/hasFormat
+<http://purl.org/dc/terms/hasFormat> rdf:type owl:ObjectProperty ;
+                                     owl:inverseOf <http://purl.org/dc/terms/isFormatOf> ;
+                                     rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento> ;
+                                     rdfs:range <http://purl.org/dc/terms/FileFormat> ;
+                                     rdfs:comment "Indica los formatos de archivos que tiene un documento"@es ;
+                                     rdfs:label "Tiene Formato"@es .
+
+
+###  http://purl.org/dc/terms/isFormatOf
+<http://purl.org/dc/terms/isFormatOf> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <http://purl.org/dc/terms/FileFormat> ;
+                                      rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento> ;
+                                      rdfs:comment "Indica los formatos de archivos que tiene un documento"@es ;
+                                      rdfs:label "Es Formato De"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#AdscritoA
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#AdscritoA> rdf:type owl:ObjectProperty ;
+                                                                               owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TieneIntegrante> ;
+                                                                               rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RepresentanteCiudadano> ;
+                                                                               rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#GrupoPolitico> ;
+                                                                               rdfs:comment "Indica que un representante ciudadano forma parte de un grupo político"@es ;
+                                                                               rdfs:label "Adscrito A"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TieneIntegrante
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TieneIntegrante> rdf:type owl:ObjectProperty ;
+                                                                                     rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#GrupoPolitico> ;
+                                                                                     rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RepresentanteCiudadano> ;
+                                                                                     rdfs:comment "Indica que un grupo político esta formado por representantes ciudadanos."@es ;
+                                                                                     rdfs:label "Tiene Integrante"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#aporta
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#aporta> rdf:type owl:ObjectProperty ;
+                                                                            owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#aportadoPor> ;
+                                                                            rdfs:domain [ rdf:type owl:Class ;
+                                                                                          owl:unionOf ( <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Funcionario>
+                                                                                                        <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RepresentanteCiudadano>
+                                                                                                      )
+                                                                                        ] ;
+                                                                            rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento> ;
+                                                                            rdfs:comment "Indica quíen aporta un documento como soporte a un punto del orden del día"@es ;
+                                                                            rdfs:label "Aporta"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#aportadoPor
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#aportadoPor> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento> ;
+                                                                                 rdfs:range [ rdf:type owl:Class ;
+                                                                                              owl:unionOf ( <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Funcionario>
+                                                                                                            <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RepresentanteCiudadano>
+                                                                                                          )
+                                                                                            ] ;
+                                                                                 rdfs:comment "Indica quíen aporta un documento como soporte a un punto del orden del día"@es ;
+                                                                                 rdfs:label "Aportado Por"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#archiva
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#archiva> rdf:type owl:ObjectProperty ;
+                                                                             owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#archivadoEn> ;
+                                                                             rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Expediente> ;
+                                                                             rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento> ;
+                                                                             rdfs:comment "Relaciona los expedientes con los documentos contenidos en este"@es ;
+                                                                             rdfs:label "Archiva"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#archivadoEn
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#archivadoEn> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento> ;
+                                                                                 rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Expediente> ;
+                                                                                 rdfs:comment "Relaciona los documentos con su respectivo expediente"@es ;
+                                                                                 rdfs:label "Archivado En"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#asociadoA
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#asociadoA> rdf:type owl:ObjectProperty ;
+                                                                               owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneAsociado> ;
+                                                                               rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Ciudadano> ;
+                                                                               rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Asociacion> ;
+                                                                               rdfs:comment "Indica a que asociacíon pertenece un Ciudadano"@es ;
+                                                                               rdfs:label "Asociado A"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#difunde
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#difunde> rdf:type owl:ObjectProperty ;
+                                                                             owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#difundidoPor> ;
+                                                                             rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#MedioDifusión> ;
+                                                                             rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Entregable> ;
+                                                                             rdfs:comment "Indica cómo o qué medio de difusión dió a conocer un entregable"@es ;
+                                                                             rdfs:label "Difunde"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#difundidoPor
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#difundidoPor> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Entregable> ;
+                                                                                  rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#MedioDifusión> ;
+                                                                                  rdfs:comment "Indica el Entregable y su medio de difusión"@es ;
+                                                                                  rdfs:label "Difundido por"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esAccesibilidadDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esAccesibilidadDe> rdf:type owl:ObjectProperty ;
+                                                                                       owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneAccesibilidad> ;
+                                                                                       rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Accesibilidad> ;
+                                                                                       rdfs:range [ rdf:type owl:Class ;
+                                                                                                    owl:unionOf ( <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Entregable>
+                                                                                                                  <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno>
+                                                                                                                )
+                                                                                                  ] ;
+                                                                                       rdfs:comment "Indica la accesibilidad relacionada a una sesión del Pleno o un Entregable"@es ;
+                                                                                       rdfs:label "Es Accesibilidad De"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esCaracterDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esCaracterDe> rdf:type owl:ObjectProperty ;
+                                                                                  owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneCaracter> ;
+                                                                                  rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#CaracterSesion> ;
+                                                                                  rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno> ;
+                                                                                  rdfs:comment "Relaciona una sesión del pleno con el tipo de carácter, pudiendo ser este ordinario, extraordinario o extraordinario urgente"@es ;
+                                                                                  rdfs:label "Es carácter de"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esComisionDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esComisionDe> rdf:type owl:ObjectProperty ;
+                                                                                  owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneComision> ;
+                                                                                  rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Comision> ;
+                                                                                  rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionRepresentante> ;
+                                                                                  rdfs:comment "Indica la comisión a la que pertenece un representante ciudadano"@es ;
+                                                                                  rdfs:label "Es Comisión De"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esDebateDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esDebateDe> rdf:type owl:ObjectProperty ;
+                                                                                owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneDebate> ;
+                                                                                rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Debate> ;
+                                                                                rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> ;
+                                                                                rdfs:comment "Relaciona un debate con un punto del orden del día"@es ;
+                                                                                rdfs:label "Es debate de"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esEntregableDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esEntregableDe> rdf:type owl:ObjectProperty ;
+                                                                                    owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#generaEntregable> ;
+                                                                                    rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Entregable> ;
+                                                                                    rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno> ;
+                                                                                    rdfs:comment "Indica qué entregable es producido como resultado de una sesión del pleno"@es ;
+                                                                                    rdfs:label "Es Entregable De"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esEstadoDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esEstadoDe> rdf:type owl:ObjectProperty ;
+                                                                                owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneEstado> ;
+                                                                                rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#EstadoPuntoOD> ;
+                                                                                rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> ;
+                                                                                rdfs:comment "Relación que permite indicar que puntos del orden del día tienen un estado específico"@es ;
+                                                                                rdfs:label "Es estado de"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esMiembroDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esMiembroDe> rdf:type owl:ObjectProperty ;
+                                                                                 owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneMiembro> ;
+                                                                                 rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Concejal> ;
+                                                                                 rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionRepresentante> ;
+                                                                                 rdfs:comment "Relaciona un concejal con la comisión a la que pertenece en un periodo de tiempo"@es ;
+                                                                                 rdfs:label "Es miembro de"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esModoAccesoDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esModoAccesoDe> rdf:type owl:ObjectProperty ;
+                                                                                    owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneModoAcceso> ;
+                                                                                    rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ModoAcceso> ;
+                                                                                    rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno> ;
+                                                                                    rdfs:comment "Indica las formas de acceso a una sesión plenaria"@es ;
+                                                                                    rdfs:label "Es Modo de Acceso De"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esMunicipioDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esMunicipioDe> rdf:type owl:ObjectProperty ;
+                                                                                   owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneMunicipio> ;
+                                                                                   rdfs:domain <http://geo.linkeddata.es/ontology/Municipio> ;
+                                                                                   rdfs:range <http://geo.linkeddata.es/ontology/Provincia> ;
+                                                                                   rdfs:comment "Indica que un municipio pertenece a una provincia"@es ;
+                                                                                   rdfs:label "Es municipio de"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esParteDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esParteDe> rdf:type owl:ObjectProperty ;
+                                                                               owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tienePuntoOD> ;
+                                                                               rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> ;
+                                                                               rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno> ;
+                                                                               rdfs:comment "Relaciona un punto del orden del día con la sesión en la que fue tratado"@es ;
+                                                                               rdfs:label "Es parte de"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esParticipanteEn
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esParticipanteEn> rdf:type owl:ObjectProperty ;
+                                                                                      owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneParticipante> ;
+                                                                                      rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RepresentanteCiudadano> ;
+                                                                                      rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Debate> ;
+                                                                                      rdfs:comment "Permite indicar un representante ciudadano que participa en el Debate de un punto del orden del día"@es ;
+                                                                                      rdfs:label "Es Participante En"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esPortavozDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esPortavozDe> rdf:type owl:ObjectProperty ;
+                                                                                  owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tienePortavoz> ;
+                                                                                  rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Portavoz> ;
+                                                                                  rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#GrupoPolitico> ;
+                                                                                  rdfs:comment "Relaciona un grupo político con su respectivo portavoz"@es ;
+                                                                                  rdfs:label "Es portavoz de"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esProcedimientoDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esProcedimientoDe> rdf:type owl:ObjectProperty ;
+                                                                                       owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoProcedimiento> ;
+                                                                                       rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                       rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Expediente> ;
+                                                                                       rdfs:comment "Relaciona un procedimiento con los expedientes que tienen un tipo determinado de procedimiento"@es ;
+                                                                                       rdfs:label "Es Procedimiento De"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esRepresentanteDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esRepresentanteDe> rdf:type owl:ObjectProperty ;
+                                                                                       owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneRepresentante> ;
+                                                                                       rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Concejal> ;
+                                                                                       rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Portavoz> ;
+                                                                                       rdfs:comment "Relaciona un concejal con el grupo político del cual es portavoz"@es ;
+                                                                                       rdfs:label "Es representante de"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esTipoComisionDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esTipoComisionDe> rdf:type owl:ObjectProperty ;
+                                                                                      owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoComision> ;
+                                                                                      rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoComision> ;
+                                                                                      rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Comision> ;
+                                                                                      rdfs:comment "Relaciona los tipos de comisión con aquellas comisiones que pertenecen a cada tipo"@es ;
+                                                                                      rdfs:label "Es tipo comisión de"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esTipoDocumentoDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esTipoDocumentoDe> rdf:type owl:ObjectProperty ;
+                                                                                       owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoDocumento> ;
+                                                                                       rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoDocumento> ;
+                                                                                       rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento> ;
+                                                                                       rdfs:comment "Indica que documentos son de un determinado tipo"@es ;
+                                                                                       rdfs:label "Es Tipo De Documento De"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esTipoExpedienteDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esTipoExpedienteDe> rdf:type owl:ObjectProperty ;
+                                                                                        owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoExpediente> ;
+                                                                                        rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoExpediente> ;
+                                                                                        rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Expediente> ;
+                                                                                        rdfs:comment "Indica que expedientes son de un determinado tipo"@es ;
+                                                                                        rdfs:label "Es tipo de expediente de"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esTipoPuntoDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esTipoPuntoDe> rdf:type owl:ObjectProperty ;
+                                                                                   owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoPunto> ;
+                                                                                   rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto> ;
+                                                                                   rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> ;
+                                                                                   rdfs:comment "Indica que puntos del orden del día son de un determinado tipo"@es ;
+                                                                                   rdfs:label "Es tipo punto de"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esVotacionDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esVotacionDe> rdf:type owl:ObjectProperty ;
+                                                                                  owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneVotacion> ;
+                                                                                  rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Votacion> ;
+                                                                                  rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> ;
+                                                                                  rdfs:comment "Relaciona una votación con el punto del orden del día correspondiente"@es ;
+                                                                                  rdfs:label "Es votación de"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esVotanteEn
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esVotanteEn> rdf:type owl:ObjectProperty ;
+                                                                                 owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneVotante> ;
+                                                                                 rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RepresentanteCiudadano> ;
+                                                                                 rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Votacion> ;
+                                                                                 rdfs:comment "Permite indicar un representante ciudadano que participa en la Votación de un punto del orden del día"@es ;
+                                                                                 rdfs:label "Es votante en"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esVotoDe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esVotoDe> rdf:type owl:ObjectProperty ;
+                                                                              owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneVoto> ;
+                                                                              rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Voto> ;
+                                                                              rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Votacion> ;
+                                                                              rdfs:comment "Relaciona un voto con la clase definida por la relación ternaria entre voto, representante y punto del orden del día"@es ;
+                                                                              rdfs:label "Es voto de"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#estudia
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#estudia> rdf:type owl:ObjectProperty ;
+                                                                             owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tratadoPor> ;
+                                                                             rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Comision> ;
+                                                                             rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> ;
+                                                                             rdfs:comment "Relaciona las comisiones con los puntos del orden del día que le corresponden a esta"@es ;
+                                                                             rdfs:label "Estudia"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#generaEntregable
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#generaEntregable> rdf:type owl:ObjectProperty ;
+                                                                                      rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno> ;
+                                                                                      rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Entregable> ;
+                                                                                      rdfs:comment "Indica el entregable que ha sido generado por una sesión del pleno"@es ;
+                                                                                      rdfs:label "Genera Entregable"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#gestiona
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#gestiona> rdf:type owl:ObjectProperty ;
+                                                                              owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#gestionadoPor> ;
+                                                                              rdfs:domain <http://purl.org/dc/dcmitype/Software> ;
+                                                                              rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Expediente> ;
+                                                                              rdfs:comment "Indica qué software se emplea para la gestión de expedientes."@es ;
+                                                                              rdfs:label "Gestiona"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#gestionadoPor
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#gestionadoPor> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Expediente> ;
+                                                                                   rdfs:range <http://purl.org/dc/dcmitype/Software> ;
+                                                                                   rdfs:comment "Indica qué software se emplea para la gestión de expedientes."@es ;
+                                                                                   rdfs:label "Es Gestionado Por"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#hasPart
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#hasPart> rdf:type owl:ObjectProperty ;
+                                                                             rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Expediente> ;
+                                                                             rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento> ;
+                                                                             rdfs:comment "una entidad esta formada por una segunda entidad, entre otros"@es ;
+                                                                             rdfs:label "tiene parte"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#participaEn
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#participaEn> rdf:type owl:ObjectProperty ;
+                                                                                 owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#participante> ;
+                                                                                 rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Ciudadano> ;
+                                                                                 rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> ;
+                                                                                 rdfs:comment "Permite definir que ciudadanos participan en un determinado orden del día"@es ;
+                                                                                 rdfs:label "Participa En"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#participante
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#participante> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> ;
+                                                                                  rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Ciudadano> ;
+                                                                                  rdfs:comment "Relaciona un ciudadano con un punto del orden del día en el que ha participado"@es ;
+                                                                                  rdfs:label "Participante"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#perteneceA
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#perteneceA> rdf:type owl:ObjectProperty ;
+                                                                                owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneSesion> ;
+                                                                                rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno> ;
+                                                                                rdfs:range <http://geo.linkeddata.es/ontology/Municipio> ;
+                                                                                rdfs:comment "Relaciona una sesión del Pleno con el municipio que la desarrolla"@es ;
+                                                                                rdfs:label "Pertenece A"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#sustenta
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#sustenta> rdf:type owl:ObjectProperty ;
+                                                                              owl:inverseOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#sustentadoPor> ;
+                                                                              rdfs:domain <http://xmlns.com/foaf/0.1/Document> ;
+                                                                              rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> ;
+                                                                              rdfs:comment "Indica que un documento sustenta la decisión sobre un punto del orden del día."@es ;
+                                                                              rdfs:label "Sustenta"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#sustentadoPor
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#sustentadoPor> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> ;
+                                                                                   rdfs:range <http://xmlns.com/foaf/0.1/Document> ;
+                                                                                   rdfs:comment "Indica que la decisión sobre un punto del orden del día  se sustenta en cierto documento."@es ;
+                                                                                   rdfs:label "Sustentado Por"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneAccesibilidad
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneAccesibilidad> rdf:type owl:ObjectProperty ;
+                                                                                        rdfs:domain [ rdf:type owl:Class ;
+                                                                                                      owl:unionOf ( <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Entregable>
+                                                                                                                    <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno>
+                                                                                                                  )
+                                                                                                    ] ;
+                                                                                        rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Accesibilidad> ;
+                                                                                        rdfs:comment "Indica la accesibilidad relacionada a una sesión del Pleno o un Entregable"@es ;
+                                                                                        rdfs:label "Tiene Accesibilidad"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneAsociado
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneAsociado> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Asociacion> ;
+                                                                                   rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Ciudadano> ;
+                                                                                   rdfs:comment "Indica los ciudadanos que pertenecen a una asociación"@es ;
+                                                                                   rdfs:label "Tiene Asociado"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneCaracter
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneCaracter> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno> ;
+                                                                                   rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#CaracterSesion> ;
+                                                                                   rdfs:comment "Relaciona una sesión del pleno con su carácter (ordinaria, extraordinaria, extraordinaria urgente)"@es ;
+                                                                                   rdfs:label "Tiene Carácter"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneComision
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneComision> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionRepresentante> ;
+                                                                                   rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Comision> ;
+                                                                                   rdfs:comment "Indica la comisión a la que pertenece un representante ciudadano"@es ;
+                                                                                   rdfs:label "Tiene Comisión"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneDebate
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneDebate> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> ;
+                                                                                 rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Debate> ;
+                                                                                 rdfs:comment "Relación entre un punto del orden del día y su respectivo debate"@es ;
+                                                                                 rdfs:label "Tiene Debate"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneEstado
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneEstado> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> ;
+                                                                                 rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#EstadoPuntoOD> ;
+                                                                                 rdfs:comment "Relación entre un punto del orden del día y su respectivo estado"@es ;
+                                                                                 rdfs:label "Tiene Estado"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneMiembro
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneMiembro> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionRepresentante> ;
+                                                                                  rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Concejal> ;
+                                                                                  rdfs:comment "Indica los concejales que pertenecen a una determinada comisión"@es ;
+                                                                                  rdfs:label "Tiene Miembro"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneModoAcceso
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneModoAcceso> rdf:type owl:ObjectProperty ;
+                                                                                     rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno> ;
+                                                                                     rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ModoAcceso> ;
+                                                                                     rdfs:comment "Indica los modos de acceso que tiene una sesión plenaria"@es ;
+                                                                                     rdfs:label "Tiene Modo de Acceso"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneMunicipio
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneMunicipio> rdf:type owl:ObjectProperty ;
+                                                                                    rdfs:domain <http://geo.linkeddata.es/ontology/Provincia> ;
+                                                                                    rdfs:range <http://geo.linkeddata.es/ontology/Municipio> ;
+                                                                                    rdfs:comment "Indica la provincia a la que pertenece el Municipio"@es ;
+                                                                                    rdfs:label "Tiene municipio"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneParticipante
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneParticipante> rdf:type owl:ObjectProperty ;
+                                                                                       rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Debate> ;
+                                                                                       rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RepresentanteCiudadano> ;
+                                                                                       rdfs:comment "Relación que indica que representantes ciudadanos participan en un debate"@es ;
+                                                                                       rdfs:label "Tiene Participante"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tienePortavoz
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tienePortavoz> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#GrupoPolitico> ;
+                                                                                   rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Portavoz> ;
+                                                                                   rdfs:comment "Propiedad que permite definir la relación ternaria entre un grupo político, el concejal que lo representa en calidad de portavoz y el periodo de representación"@es ;
+                                                                                   rdfs:label "Tiene Portavoz"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tienePuntoOD
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tienePuntoOD> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno> ;
+                                                                                  rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> ;
+                                                                                  rdfs:comment "Relaciona una sesión con los puntos del orden del día tratados en ella"@es ;
+                                                                                  rdfs:label "Tiene Punto de Orden del Día"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneRepresentante
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneRepresentante> rdf:type owl:ObjectProperty ;
+                                                                                        rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Portavoz> ;
+                                                                                        rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Concejal> ;
+                                                                                        rdfs:comment "Indica el representante (concejal) de un grupo político que a su vez es el portavoz"@es ;
+                                                                                        rdfs:label "Representante"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneSesion
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneSesion> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:domain <http://geo.linkeddata.es/ontology/Municipio> ;
+                                                                                 rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno> ;
+                                                                                 rdfs:comment "Indica todas las sesiones del Pleno que se han desarrollado en un determinado municipio"@es ;
+                                                                                 rdfs:label "Tiene Sesion"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoComision
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoComision> rdf:type owl:ObjectProperty ;
+                                                                                       rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Comision> ;
+                                                                                       rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoComision> ;
+                                                                                       rdfs:comment "Indica el tipo al que pertenece una comisión"@es ;
+                                                                                       rdfs:label "Tiene tipo comisión"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoDocumento
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoDocumento> rdf:type owl:ObjectProperty ;
+                                                                                        rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento> ;
+                                                                                        rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoDocumento> ;
+                                                                                        rdfs:comment "Indica el tipo de un documento"@es ;
+                                                                                        rdfs:label "Tipo de documento"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoExpediente
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoExpediente> rdf:type owl:ObjectProperty ;
+                                                                                         rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Expediente> ;
+                                                                                         rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoExpediente> ;
+                                                                                         rdfs:comment "Indica el tipo de un expediente"@es ;
+                                                                                         rdfs:label "Tipo de Expediente"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoProcedimiento
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoProcedimiento> rdf:type owl:ObjectProperty ;
+                                                                                            rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Expediente> ;
+                                                                                            rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                            rdfs:comment "Especifica el tipo de procedimiento con el que ha sido creado un expediente"@es ;
+                                                                                            rdfs:label "Tipo procedimiento"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoPunto
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoPunto> rdf:type owl:ObjectProperty ;
+                                                                                    rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> ;
+                                                                                    rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto> ;
+                                                                                    rdfs:comment "Indica el tipo de un punto del orden del día"@es ;
+                                                                                    rdfs:label "Tipo de Punto"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneVotacion
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneVotacion> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> ;
+                                                                                   rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Votacion> ;
+                                                                                   rdfs:comment "Indica la votación realizada sobre un punto del orden del día"@es ;
+                                                                                   rdfs:label "Tiene Votación"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneVotante
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneVotante> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Votacion> ;
+                                                                                  rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RepresentanteCiudadano> ;
+                                                                                  rdfs:comment "Relación que indica que representantes ciudadanos participan en una votación"@es ;
+                                                                                  rdfs:label "Tiene votante"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneVoto
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneVoto> rdf:type owl:ObjectProperty ;
+                                                                               rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Votacion> ;
+                                                                               rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Voto> ;
+                                                                               rdfs:comment "Indica el voto (a favor, en contra, etc) en una votación"@es ;
+                                                                               rdfs:label "Tiene Voto"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tratadoPor
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tratadoPor> rdf:type owl:ObjectProperty ;
+                                                                                rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> ;
+                                                                                rdfs:range <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Comision> ;
+                                                                                rdfs:comment "Relaciona un punto del orden del día con la comisión a cargo de este"@es ;
+                                                                                rdfs:label "Tratado Por"@es .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://dbpedia.org/ontology/population
+<http://dbpedia.org/ontology/population> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <http://geo.linkeddata.es/ontology/Municipio> ;
+                                         rdfs:range xsd:int ;
+                                         rdfs:comment "Población humana, (del latín tardío populatio, -ōnis, en latín 'saqueo', 'devastación') en geografía y sociología es el grupo de personas que viven en un área o espacio geográfico. Población biológica es el conjunto de individuos de la misma especie que habita una extensión determinada en un momento dado"@en ;
+                                         rdfs:label "Población"@es .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+                                   rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento> ;
+                                   rdfs:range xsd:dateTime ;
+                                   <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#created-003> ;
+                                   rdfs:comment "Date of creation of the resource."@en ,
+                                                "fecha que indica cuando una persona crea un documento"@es ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "Date Created"@en ,
+                                              "Fecha de creación"@es .
+
+
+###  http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain [ rdf:type owl:Class ;
+                                              owl:unionOf ( <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento>
+                                                            <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno>
+                                                          )
+                                            ] ;
+                                rdfs:range xsd:dateTime ;
+                                rdfs:comment "Indica la fecha en la que ocurrió un evento"@es ;
+                                rdfs:label "Fecha"@es .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento> ;
+                                 rdfs:range rdfs:Literal ;
+                                 <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#titleT-002> ;
+                                 rdfs:comment "A name given to the resource."@en ;
+                                 rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                 rdfs:label "Title"@en .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#asunto
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#asunto> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:domain [ rdf:type owl:Class ;
+                                                                                          owl:unionOf ( <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Expediente>
+                                                                                                        <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia>
+                                                                                                      )
+                                                                                        ] ;
+                                                                            rdfs:range rdfs:Literal ;
+                                                                            rdfs:comment "Breve descripción sobre un punto del orden del día"@es ;
+                                                                            rdfs:label "Asunto"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#cargo
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#cargo> rdf:type owl:DatatypeProperty ;
+                                                                           rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Funcionario> ;
+                                                                           rdfs:range rdfs:Literal ;
+                                                                           rdfs:comment "Cargo que desempeña un funcionario público"@es ;
+                                                                           rdfs:label "Cargo"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#correo
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#correo> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:domain [ rdf:type owl:Class ;
+                                                                                          owl:unionOf ( <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#GrupoPolitico>
+                                                                                                        <http://xmlns.com/foaf/0.1/Agent>
+                                                                                                        <http://xmlns.com/foaf/0.1/Person>
+                                                                                                      )
+                                                                                        ] ;
+                                                                            rdfs:range rdfs:Literal ;
+                                                                            rdfs:comment "correo electrónico de una persona o entidad"@es ;
+                                                                            rdfs:label "Correo electrónico"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#descripcion
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#descripcion> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento> ;
+                                                                                 rdfs:range rdfs:Literal ;
+                                                                                 rdfs:comment "Describe un documento utilizado para sustentar un punto del orden del día"@es ;
+                                                                                 rdfs:label "Descripción"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#enlaceActa
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#enlaceActa> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno> ;
+                                                                                rdfs:range rdfs:Literal ;
+                                                                                rdfs:comment "Incluye la url del sitio web donde se encuentra publicada el acta generada a partir de una sesión del pleno del ayuntamiento"@es ;
+                                                                                rdfs:label "Enlace al acta"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#enlcaceDebate
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#enlcaceDebate> rdf:type owl:DatatypeProperty ;
+                                                                                   rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Debate> ;
+                                                                                   rdfs:range rdfs:Literal ;
+                                                                                   rdfs:comment "Enlace a la página web donde está publicado un determinado debate"@es ;
+                                                                                   rdfs:label "Enlace al debate"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#fechaAlta
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#fechaAlta> rdf:type owl:DatatypeProperty ;
+                                                                               rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+                                                                               rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Expediente> ;
+                                                                               rdfs:range xsd:dateTime ;
+                                                                               rdfs:comment "Fecha en la que se abrió  un expediente"@es ;
+                                                                               rdfs:label "Fecha de Alta"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#fechaCierre
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#fechaCierre> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+                                                                                 rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Expediente> ;
+                                                                                 rdfs:range xsd:dateTime ;
+                                                                                 rdfs:comment "Fecha en la que se finalizó un expediente"@es ;
+                                                                                 rdfs:label "Fecha de cierre"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#fechaFin
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#fechaFin> rdf:type owl:DatatypeProperty ;
+                                                                              rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+                                                                              rdfs:domain [ rdf:type owl:Class ;
+                                                                                            owl:unionOf ( <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionRepresentante>
+                                                                                                          <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Portavoz>
+                                                                                                        )
+                                                                                          ] ;
+                                                                              rdfs:range xsd:dateTime ;
+                                                                              rdfs:comment "Fecha de Finalización de un período"@es ;
+                                                                              rdfs:label "Fecha de Finalización"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#fechaFinRepresentacion
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#fechaFinRepresentacion> rdf:type owl:DatatypeProperty ;
+                                                                                            rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+                                                                                            rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RepresentanteCiudadano> ;
+                                                                                            rdfs:range xsd:dateTime ;
+                                                                                            rdfs:comment "Fecha de finalización del período de un representante ciudadano"@es ;
+                                                                                            rdfs:label "Fecha de Finalización"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#fechaInicio
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#fechaInicio> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+                                                                                 rdfs:domain [ rdf:type owl:Class ;
+                                                                                               owl:unionOf ( <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionRepresentante>
+                                                                                                             <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Portavoz>
+                                                                                                           )
+                                                                                             ] ;
+                                                                                 rdfs:range xsd:dateTime ;
+                                                                                 rdfs:comment "Fecha que indica cuando un representante inicia sus labores dentro de una comisión, o un concejal inicia su período de portavocía."@es ;
+                                                                                 rdfs:label "Fecha de Inicio"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#nombre
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#nombre> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:domain [ rdf:type owl:Class ;
+                                                                                          owl:unionOf ( <http://geo.linkeddata.es/ontology/Municipio>
+                                                                                                        <http://geo.linkeddata.es/ontology/Provincia>
+                                                                                                        <http://purl.org/dc/dcmitype/Software>
+                                                                                                      )
+                                                                                        ] ;
+                                                                            rdfs:range rdfs:Literal ;
+                                                                            rdfs:comment "Nombre propio de una entidad"@es ;
+                                                                            rdfs:label "Nombre"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#numero
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#numero> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> ;
+                                                                            rdfs:range xsd:integer ;
+                                                                            rdfs:comment "Número de un punto del orden del día"@es ;
+                                                                            rdfs:label "Número"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#numeroExpediente
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#numeroExpediente> rdf:type owl:DatatypeProperty ;
+                                                                                      rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Expediente> ;
+                                                                                      rdfs:range rdfs:Literal ;
+                                                                                      rdfs:comment "Número del expediente asociado a un punto del orden del día"@es ;
+                                                                                      rdfs:label "Código de expediente"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#perfil
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#perfil> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RepresentanteCiudadano> ;
+                                                                            rdfs:range xsd:anyURI ;
+                                                                            rdfs:comment "Enlace al perfil o curriculum de una persona"@es ;
+                                                                            rdfs:label "Perfil"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#retransmision
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#retransmision> rdf:type owl:DatatypeProperty ;
+                                                                                   rdfs:domain [ rdf:type owl:Class ;
+                                                                                                 owl:unionOf ( <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Debate>
+                                                                                                               <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno>
+                                                                                                             )
+                                                                                               ] ;
+                                                                                   rdfs:range rdfs:Literal ;
+                                                                                   rdfs:comment "Retransmisión de una sesión de un pleno o de una parte de esta"@es ;
+                                                                                   rdfs:label "Retransmisión"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#unidadAdministrativa
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#unidadAdministrativa> rdf:type owl:DatatypeProperty ;
+                                                                                          rdfs:domain <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Funcionario> ;
+                                                                                          rdfs:range rdfs:Literal ;
+                                                                                          rdfs:comment "Unidad Administrativa en la que trabaja un funcionario público"@es ;
+                                                                                          rdfs:label "Unidad Administrativa"@es .
+
+
+###  http://xmlns.com/foaf/0.1/lastName
+<http://xmlns.com/foaf/0.1/lastName> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                                     rdfs:range rdfs:Literal ;
+                                     rdfs:comment "The last name of a person."^^xsd:string ;
+                                     rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+                                     rdfs:label "Apellido"@es ,
+                                                "lastName"^^xsd:string ;
+                                     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"^^xsd:string .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain [ rdf:type owl:Class ;
+                                               owl:unionOf ( <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Asociacion>
+                                                             <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Comision>
+                                                             <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#GrupoPolitico>
+                                                             <http://xmlns.com/foaf/0.1/Person>
+                                                           )
+                                             ] ;
+                                 rdfs:range rdfs:Literal ;
+                                 rdfs:comment "A name for some thing"@en ;
+                                 rdfs:label "Nombre"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://geo.linkeddata.es/ontology/Municipio
+<http://geo.linkeddata.es/ontology/Municipio> rdf:type owl:Class ;
+                                              rdfs:comment "Entidad administrativa que puede agrupar una sola localidad o varias, que puede hacer referencia a una ciudad, pueblo o aldea."@es ;
+                                              rdfs:label "Municipio"@es .
+
+
+###  http://geo.linkeddata.es/ontology/Provincia
+<http://geo.linkeddata.es/ontology/Provincia> rdf:type owl:Class ;
+                                              rdfs:comment "Entidad subnacional por lo general inmediatamente inferior al Estado"@es ;
+                                              rdfs:label "Provincia"@es .
+
+
+###  http://purl.org/dc/dcmitype/Software
+<http://purl.org/dc/dcmitype/Software> rdf:type owl:Class ;
+                                       rdfs:comment "Equipamiento lógico o soporte lógico de un sistema informático, que comprende el conjunto de los componentes lógicos necesarios que hacen posible la realización de tareas específicas como almacenamiento y gestion de la documentación empleada en el punto del orden del día de una sesión del Pleno."@es ;
+                                       rdfs:label "Software"@es .
+
+
+###  http://purl.org/dc/terms/FileFormat
+<http://purl.org/dc/terms/FileFormat> rdf:type owl:Class ;
+                                      rdfs:comment "Formato de los archivos que forman parte del expediente"@es ;
+                                      rdfs:label "Formato de Archivo"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Accesibilidad
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Accesibilidad> rdf:type owl:Class ;
+                                                                                   rdfs:comment "Sistemas de accesibilidad relacionados al orden del día y al acta de la sesión del Pleno"@es ;
+                                                                                   rdfs:label "Accesibilidad"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Alcalde
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Alcalde> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RepresentanteCiudadano> ;
+                                                                             owl:disjointWith <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Concejal> ;
+                                                                             rdfs:comment "Máxima autoridad de un municipio, generalmente está encargado de presidir los plenos del ayuntamiento"@es ;
+                                                                             rdfs:label "Alcalde"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Asociacion
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Asociacion> rdf:type owl:Class ;
+                                                                                rdfs:comment "Grupo de ciudadanos que representan un barrio o entidad y que pueden participar en un pleno municipal"@es ;
+                                                                                rdfs:label "Asociación"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#CaracterSesion
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#CaracterSesion> rdf:type owl:Class ;
+                                                                                    rdfs:comment "Clasifica a una sesión como ordinaria, extraordinara o extraordinaria urgente"@es ;
+                                                                                    rdfs:label "Carácter de la Sesión"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Ciudadano
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Ciudadano> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ;
+                                                                               rdfs:comment "Persona que puede presentar ruegos en una sesión del pleno del ayuntamiento"@es ;
+                                                                               rdfs:label "Ciudadano"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Comision
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Comision> rdf:type owl:Class ;
+                                                                              rdfs:comment "Comisiones formadas en el pleno para tratar asuntos específicos"@es ;
+                                                                              rdfs:label "Comisión"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionRepresentante
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionRepresentante> rdf:type owl:Class ;
+                                                                                           rdfs:comment "Relación ternaria que indica que representantes forman parte de las diferentes comisiones y sus periodos"@es ;
+                                                                                           rdfs:label "Comisión - Representante"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Concejal
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Concejal> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RepresentanteCiudadano> ;
+                                                                              rdfs:comment "Representante elegido por el pueblo para participar en los plenos municipales y tomar decisiones que beneficien a la ciudadanía, entre otros."@es ;
+                                                                              rdfs:label "Concejal"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Debate
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Debate> rdf:type owl:Class ;
+                                                                            rdfs:comment "Indica la relación entre los representantes ciudadanos que exponen sus puntos de vista sobre los diferentes asuntos tratados en una sesión del pleno"@es ;
+                                                                            rdfs:label "Debate"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento> rdf:type owl:Class ;
+                                                                               owl:equivalentClass <http://xmlns.com/foaf/0.1/Document> ;
+                                                                               rdfs:comment "Clase para definir los documentos empleados en un punto del orden del día"@es ;
+                                                                               rdfs:label "Documento"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Entregable
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Entregable> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento> ;
+                                                                                rdfs:comment "Documento resultante de una sesión plenaria"@es ;
+                                                                                rdfs:label "Entregable"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#EstadoPuntoOD
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#EstadoPuntoOD> rdf:type owl:Class ;
+                                                                                   rdfs:comment "Estado de un punto del orden del día, puede ser aprobado, rechazado, entre otros"@es ;
+                                                                                   rdfs:label "Estado Punto Orden del Día"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Expediente
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Expediente> rdf:type owl:Class ;
+                                                                                rdfs:comment "Expediente relacionado con un punto del orden del día y que abarca los documentos que sirven de sustento de dicho punto"@es ;
+                                                                                rdfs:label "Expediente"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Funcionario
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Funcionario> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ;
+                                                                                 rdfs:comment "Personas que portan conocimiento y documentación necesaria a un expediente y que sirve para el desarrollo de un determinado punto del orden del día"@es ;
+                                                                                 rdfs:label "Funcionario"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#GrupoPolitico
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#GrupoPolitico> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection> ;
+                                                                                   rdfs:comment "Grupo político que tiene parte en el pleno municipal"@es ;
+                                                                                   rdfs:label "Grupo Político"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#MedioDifusión
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#MedioDifusión> rdf:type owl:Class ;
+                                                                                   rdfs:comment "Canal de comunicación de los eventos de una sesión plenaria"@es ;
+                                                                                   rdfs:label "Medio de Difusión"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ModoAcceso
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ModoAcceso> rdf:type owl:Class ;
+                                                                                rdfs:comment "Formas de acceder a una sesión del Pleno"@es ;
+                                                                                rdfs:label "Modo de Acceso"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Portavoz
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Portavoz> rdf:type owl:Class ;
+                                                                              rdfs:comment "Clase que define la relación entre los grupos políticos y sus representantes en un determinado periodo"@es ;
+                                                                              rdfs:label "Portavoz"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> rdf:type owl:Class ;
+                                                                                   rdfs:comment "Tipo de Procedimiento de un expediente"@es ;
+                                                                                   rdfs:label "Procedimiento"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia> rdf:type owl:Class ;
+                                                                                   rdfs:comment "Asuntos que se tratan en una sesión del pleno del ayuntamiento"@es ;
+                                                                                   rdfs:label "Punto del Orden del Día"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RepresentanteCiudadano
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RepresentanteCiudadano> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ;
+                                                                                            rdfs:comment "Personas que interactúan de forma directa durante el desarrollo del pleno, y son los encargados de tomar decisiones"@es ;
+                                                                                            rdfs:label "Representante Ciudadano"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno> rdf:type owl:Class ;
+                                                                                 rdfs:comment "Sesiones en las que se tratan varios asuntos de interés para la ciudadanía"@es ;
+                                                                                 rdfs:label "Sesión del Pleno del Ayuntamiento"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoComision
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoComision> rdf:type owl:Class ;
+                                                                                  rdfs:comment "Tipos de comisiones de un pleno municipal"@es ;
+                                                                                  rdfs:label "Tipo de comisión"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoDocumento
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoDocumento> rdf:type owl:Class ;
+                                                                                   rdfs:comment "Tipos de documentos que pueden ser presentados como sustento para un punto del orden del día"@es ;
+                                                                                   rdfs:label "Tipo de Documento"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoExpediente
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoExpediente> rdf:type owl:Class ;
+                                                                                    rdfs:comment "Diferentes tipos que puede tener un Expediente"@es ;
+                                                                                    rdfs:label "Tipo de Expediente"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto> rdf:type owl:Class ;
+                                                                               rdfs:comment "Tipo que puede tener un punto de la sesión del pleno, como moción, pregunta, ruego, etc."@es ;
+                                                                               rdfs:label "Tipo de Punto"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Votacion
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Votacion> rdf:type owl:Class ;
+                                                                              rdfs:comment "Clase que permite describirl la relación entre los Representantes ciudadanos que expresan su Voto sobre un Punto del Orden del Día"@es ;
+                                                                              rdfs:label "Votación"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Voto
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Voto> rdf:type owl:Class ;
+                                                                          rdfs:comment "Clase que permite indicar el voto expresado por un representante ciudadano, pudiendo ser a favor, en contra o abstención"@es ;
+                                                                          rdfs:label "Voto"@es .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl#Agent
+<http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl#Agent> rdf:type owl:Class ;
+                                                                   owl:equivalentClass <http://xmlns.com/foaf/0.1/Agent> ;
+                                                                   rdfs:comment "Una entidad, sea esta una persona, un grupo, un software o cualquiere objeto físico"@es ;
+                                                                   rdfs:label "Agente"@es .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
+                                  rdfs:comment "Una entidad, sea esta una persona, un grupo, un software o cualquiere objeto físico"@es ;
+                                  rdfs:label "Agente"@es .
+
+
+###  http://xmlns.com/foaf/0.1/Document
+<http://xmlns.com/foaf/0.1/Document> rdf:type owl:Class ;
+                                     rdfs:comment "Cualquier documento físico o electrónico"@es ;
+                                     rdfs:label "Documento"@es .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
+                                   rdfs:comment "Clase que describe una persona"@es ;
+                                   rdfs:label "Person"@es .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/dc/terms/
+<http://purl.org/dc/terms/> rdf:type owl:NamedIndividual ;
+                            <http://purl.org/dc/terms/title> "DCMI Metadata Terms - other"@en .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ActaRecepcion
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ActaRecepcion> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoExpediente> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Adquisiciones
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Adquisiciones> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoExpediente> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Alegaciones
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Alegaciones> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoExpediente> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#AudioDescripcion
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#AudioDescripcion> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Accesibilidad> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Boletin
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Boletin> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#MedioDifusión> ;
+                                                                             rdfs:label "Tablón de Anuncios"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Certificado
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Certificado> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoDocumento> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionCuentas
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionCuentas> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Comision> ;
+                                                                                     rdfs:label "Comisión especial de cuentas"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionDeUIV
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionDeUIV> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Comision> ;
+                                                                                   rdfs:label "Comisión de Urbanismo, Infraestructura y Vivienda"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionFinanciera
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionFinanciera> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Comision> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionInformativa
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionInformativa> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Comision> ;
+                                                                                         rdfs:label "Comisión Informativa"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Comunicacion
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Comunicacion> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoDocumento> ;
+                                                                                  rdfs:label "Comunicación"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#EnLinea
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#EnLinea> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ModoAcceso> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Enmienda
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Enmienda> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoDocumento> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Informe
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Informe> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoDocumento> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Iniciativa
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Iniciativa> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoDocumento> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#LecturaFacil
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#LecturaFacil> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Accesibilidad> ;
+                                                                                  rdfs:label "Lectura Fácil"@es .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#LenguajeDeSignos
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#LenguajeDeSignos> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Accesibilidad> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#MensajeriaInstantanea
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#MensajeriaInstantanea> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#MedioDifusión> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Notificacion
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Notificacion> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoDocumento> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PDF
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PDF> rdf:type owl:NamedIndividual ,
+                                                                                  <http://purl.org/dc/terms/FileFormat> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Presencial
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Presencial> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ModoAcceso> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RedesSociales
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RedesSociales> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#MedioDifusión> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TXT
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TXT> rdf:type owl:NamedIndividual ,
+                                                                                  <http://purl.org/dc/terms/FileFormat> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Transcripcion
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Transcripcion> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Accesibilidad> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Web
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Web> rdf:type owl:NamedIndividual ,
+                                                                                  <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#MedioDifusión> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#XLSX
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#XLSX> rdf:type owl:NamedIndividual ,
+                                                                                   <http://purl.org/dc/terms/FileFormat> .
+
+
+###  http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#titulo
+<http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#titulo> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto> ;
+                                                                            rdfs:label "Título"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#Extraordinaria
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#Extraordinaria> rdf:type owl:NamedIndividual ,
+                                                                                                             <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#CaracterSesion> ;
+                                                                                                    rdfs:label "Extraordinaria"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#ExtraordinariaUrgente
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#ExtraordinariaUrgente> rdf:type owl:NamedIndividual ,
+                                                                                                                    <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#CaracterSesion> ;
+                                                                                                           rdfs:label "Extraordinaria urgente"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#Ordinaria
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#Ordinaria> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#CaracterSesion> ;
+                                                                                               rdfs:label "Ordinaria"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#Permanente
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#Permanente> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoComision> ;
+                                                                                                rdfs:label "Permanente"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#AContestarEnProximaSesion
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#AContestarEnProximaSesion> rdf:type owl:NamedIndividual ,
+                                                                                                                       <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#EstadoPuntoOD> ;
+                                                                                                              rdfs:label "A contestar en próxima sesión"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#AprobadaPropuestaAlternativa
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#AprobadaPropuestaAlternativa> rdf:type owl:NamedIndividual ,
+                                                                                                                          <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#EstadoPuntoOD> ;
+                                                                                                                 rdfs:label "Aprobada propuesta alternativa"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#Aprobado
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#Aprobado> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#EstadoPuntoOD> ;
+                                                                                             rdfs:label "Aprobado"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#AprobadoConEnmienda
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#AprobadoConEnmienda> rdf:type owl:NamedIndividual ,
+                                                                                                                 <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#EstadoPuntoOD> ;
+                                                                                                        rdfs:label "Aprobado con enmienda"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#PreguntaContestada
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#PreguntaContestada> rdf:type owl:NamedIndividual ,
+                                                                                                                <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#EstadoPuntoOD> ;
+                                                                                                       rdfs:label "Pregunta contestada"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#QuedarEnterado
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#QuedarEnterado> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#EstadoPuntoOD> ;
+                                                                                                   rdfs:label "Quedar enterado"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#Rechazado
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#Rechazado> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#EstadoPuntoOD> ;
+                                                                                              rdfs:label "Rechazado"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#SobreLaMesa
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#SobreLaMesa> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#EstadoPuntoOD> ;
+                                                                                                rdfs:label "Sobre la mesa"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#abonoaAsociacionesDeMercadosAutogestionadosDeDeudasDeAntiguosTit
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#abonoaAsociacionesDeMercadosAutogestionadosDeDeudasDeAntiguosTit> rdf:type owl:NamedIndividual ,
+                                                                                                                                                              <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                     rdfs:label "Abono a asociaciones de mercados autogestionados de deudas de antiguos tit..."@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#accesoaLaInformacionDeLaLeyDeTransparencia
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#accesoaLaInformacionDeLaLeyDeTransparencia> rdf:type owl:NamedIndividual ,
+                                                                                                                                        <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                               rdfs:label "Acceso a la información de la ley de transparencia"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#actividadDeDegustacionEnPuestoDeMercadoMunicipal
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#actividadDeDegustacionEnPuestoDeMercadoMunicipal> rdf:type owl:NamedIndividual ,
+                                                                                                                                              <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                     rdfs:label "Actividad de degustación en puesto de mercado municipal"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#agenciaDeColocacionDelAyuntamientoDeValenciaSolicitudDeDemandaDeE
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#agenciaDeColocacionDelAyuntamientoDeValenciaSolicitudDeDemandaDeE> rdf:type owl:NamedIndividual ,
+                                                                                                                                                               <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                      rdfs:label "Agencia de colocación del Ayuntamiento de Valencia: solicitud de demanda de e..."@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#agenciaDeColocacionDelAyuntamientoDeValenciaTratamientoDeOfertasDe
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#agenciaDeColocacionDelAyuntamientoDeValenciaTratamientoDeOfertasDe> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                       rdfs:label "Agencia de colocación del Ayuntamiento de Valencia: tratamiento de ofertas de ..."@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#alegaciones
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#alegaciones> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                rdfs:label "Alegaciones"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#altayMantenimientoEnFicheroDeAcreedoresCesionariosPersonalPropio
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#altayMantenimientoEnFicheroDeAcreedoresCesionariosPersonalPropio> rdf:type owl:NamedIndividual ,
+                                                                                                                                                              <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                     rdfs:label "Alta y mantenimiento en fichero de acreedores cesionarios personal propio"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#aportaciónDeDocumentaciónaSolicitudesExpedientesYaEnTrámitePorElAyuntamiento
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#aportaciónDeDocumentaciónaSolicitudesExpedientesYaEnTrámitePorElAyuntamiento> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                          <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                                 rdfs:label "Aportación de documentación a solicitudes/expedientes ya en trámite por el ayuntamiento"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#autorizacionDeDependienteParaEjercerLaVentaEnUnPuestoDeMercado
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#autorizacionDeDependienteParaEjercerLaVentaEnUnPuestoDeMercado> rdf:type owl:NamedIndividual ,
+                                                                                                                                                            <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                   rdfs:label "Autorización de dependiente para ejercer la venta en un puesto de mercado"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#autorizacionDeUsoTemporalDeLosDespachosLocalesUbicadosEnElCentro
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#autorizacionDeUsoTemporalDeLosDespachosLocalesUbicadosEnElCentro> rdf:type owl:NamedIndividual ,
+                                                                                                                                                              <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                     rdfs:label "Autorización de uso temporal de los despachos/locales ubicados en el centro"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#autorizacionObrasEnUnPuestoDeMercadoMunicipalDeDistrito
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#autorizacionObrasEnUnPuestoDeMercadoMunicipalDeDistrito> rdf:type owl:NamedIndividual ,
+                                                                                                                                                     <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                            rdfs:label "Autorización de obras en un puesto de mercado municipal de distrito"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#ayudasMunicipalesValenciaActivaEmpren2017
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#ayudasMunicipalesValenciaActivaEmpren2017> rdf:type owl:NamedIndividual ,
+                                                                                                                                       <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                              rdfs:label "Ayudas municipales Valencia activa empren 2017"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#ayudasMunicipalesValenciaActivaImpulsEconomic2017
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#ayudasMunicipalesValenciaActivaImpulsEconomic2017> rdf:type owl:NamedIndividual ,
+                                                                                                                                               <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                      rdfs:label "Ayudas municipales Valencia activa impuls economic 2017"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#ayudasSeedVlcemprende2014
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#ayudasSeedVlcemprende2014> rdf:type owl:NamedIndividual ,
+                                                                                                                       <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                              rdfs:label "Ayudas SEED VLCEMPRENDE 2014"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#becasDeFormacionEnElMarcoDelProgramaDePracticasFormativasParaJovenes
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#becasDeFormacionEnElMarcoDelProgramaDePracticasFormativasParaJovenes> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                  <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                         rdfs:label "Becas de formación en el marco del programa de prácticas formativas para jóvenes"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#cambioDelEpigrafeDeVentaEnPuestosDeLosMercadosMunicipalesDeDistrito
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#cambioDelEpigrafeDeVentaEnPuestosDeLosMercadosMunicipalesDeDistrito> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                 <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                        rdfs:label "Cambio del epígrafe de venta en puestos de los mercados municipales de distrito..."@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#certificadoDeInscripcionEnLaAgenciaDeColocacionaPunt
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#certificadoDeInscripcionEnLaAgenciaDeColocacionaPunt> rdf:type owl:NamedIndividual ,
+                                                                                                                                                  <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                         rdfs:label "Certificado de inscripción en la agencia de colocación a punt"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#denuncias
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#denuncias> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                              rdfs:label "Denuncias"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#ejercicioDelDerechoDePeticion
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#ejercicioDelDerechoDePeticion> rdf:type owl:NamedIndividual ,
+                                                                                                                           <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                  rdfs:label "Ejercicio del derecho de petición"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#expedicionDeCarneDeVendedoraDeMercadoMunicipalDeDistrito
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#expedicionDeCarneDeVendedoraDeMercadoMunicipalDeDistrito> rdf:type owl:NamedIndividual ,
+                                                                                                                                                      <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                             rdfs:label "Expedición de carné de vendedor_a de mercado municipal de distrito"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#gestionDeLaRepresentacionElectronicaParaGestionesaTravesDeInternet
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#gestionDeLaRepresentacionElectronicaParaGestionesaTravesDeInternet> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                       rdfs:label "Gestión de la representación electrónica para gestiones a traves de internet"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#itinerarioParaLaCreacionyConsolidacionDeEmpresas
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#itinerarioParaLaCreacionyConsolidacionDeEmpresas> rdf:type owl:NamedIndividual ,
+                                                                                                                                              <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                     rdfs:label "Itinerario para la creación y consolidación de empresas"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#modificacionDeHorarioDeAperturaEnUnMercadoMunicipalDeDistrito
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#modificacionDeHorarioDeAperturaEnUnMercadoMunicipalDeDistrito> rdf:type owl:NamedIndividual ,
+                                                                                                                                                           <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                  rdfs:label "Modificación de horario de apertura en un mercado municipal de distrito"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#modificacion_tarifas_de_mercados_autogestionados
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#modificacion_tarifas_de_mercados_autogestionados> rdf:type owl:NamedIndividual ,
+                                                                                                                                              <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                     rdfs:label "Modificación tarifas de mercados autogestionados"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#modificaciónDeLosDatosPersonalesQueAparecenEnLaSedeElectronica
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#modificaciónDeLosDatosPersonalesQueAparecenEnLaSedeElectronica> rdf:type owl:NamedIndividual ,
+                                                                                                                                                            <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                   rdfs:label "Modificación de los datos personales que aparecen en la sede electrónica"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#peticionDeCopiasyCertificacionesDeAcuerdos
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#peticionDeCopiasyCertificacionesDeAcuerdos> rdf:type owl:NamedIndividual ,
+                                                                                                                                        <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                               rdfs:label "Petición de copias y certificaciones de acuerdos"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#premiosInnovacionSocialCiudadDeValencia2016
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#premiosInnovacionSocialCiudadDeValencia2016> rdf:type owl:NamedIndividual ,
+                                                                                                                                         <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                rdfs:label "Premios innovación social Ciudad de Valencia 2016"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#publicacionEnElTablonDeEdictosDelAyuntamientoDeValencia
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#publicacionEnElTablonDeEdictosDelAyuntamientoDeValencia> rdf:type owl:NamedIndividual ,
+                                                                                                                                                     <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                            rdfs:label "Publicación en el tablón de edictos del Ayuntamiento de Valencia"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#realizacionDeActividadExtraordinariaEnUnMercadoMunicipalDeDistrito
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#realizacionDeActividadExtraordinariaEnUnMercadoMunicipalDeDistrito> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                       rdfs:label "Realización de actividad extraordinaria en un mercado municipal de distrito"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reclamacionDeResponsabilidadPatrimonial
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reclamacionDeResponsabilidadPatrimonial> rdf:type owl:NamedIndividual ,
+                                                                                                                                     <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                            rdfs:label "Reclamación de responsabilidad patrimonial"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reclamacionesYQuejas
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reclamacionesYQuejas> rdf:type owl:NamedIndividual ,
+                                                                                                                  <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                         rdfs:label "Reclamaciones y quejas"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reclamacionesoDenunciasEnMateriaDeConsumo
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reclamacionesoDenunciasEnMateriaDeConsumo> rdf:type owl:NamedIndividual ,
+                                                                                                                                       <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                              rdfs:label "Reclamaciones o denuncias en materia de consumo"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#recursos
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#recursos> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                             rdfs:label "Recursos"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#renunciaALaTitularidadDeUnPuestoEnUnMercadoMunicipalDeDistrito
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#renunciaALaTitularidadDeUnPuestoEnUnMercadoMunicipalDeDistrito> rdf:type owl:NamedIndividual ,
+                                                                                                                                                            <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                   rdfs:label "Renuncia a la titularidad de un puesto en un mercado municipal de distrito"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reparacionDeDeficienciasEnViaPublicaServicioValenciaSiempreNueva
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reparacionDeDeficienciasEnViaPublicaServicioValenciaSiempreNueva> rdf:type owl:NamedIndividual ,
+                                                                                                                                                              <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                     rdfs:label "Reparación de deficiencias en vía pública - servicio \"Valencia siempre nueva\""@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#sinEspecificar
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#sinEspecificar> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                   rdfs:label "Sin especificar"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#solicitudDeArbitrajeDeConsumo
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#solicitudDeArbitrajeDeConsumo> rdf:type owl:NamedIndividual ,
+                                                                                                                           <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                  rdfs:label "Solicitud de arbitraje de consumo"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#solicitudDeHojasDeReclamacionesDeConsumoPorLosEmpresariosComerc
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#solicitudDeHojasDeReclamacionesDeConsumoPorLosEmpresariosComerc> rdf:type owl:NamedIndividual ,
+                                                                                                                                                             <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                    rdfs:label "Solicitud de hojas de reclamaciones de consumo por los empresarios, comerc"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#solicitudDeInformacion
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#solicitudDeInformacion> rdf:type owl:NamedIndividual ,
+                                                                                                                    <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                           rdfs:label "Solicitud de información"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#subencionDerivadaDeConvenioDeAutogestion
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#subencionDerivadaDeConvenioDeAutogestion> rdf:type owl:NamedIndividual ,
+                                                                                                                                      <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                             rdfs:label "Subención derivada de convenios de autogestión"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#subencionesParaLaPromocionDelTurismoDeComprasDirigidasAComercios
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#subencionesParaLaPromocionDelTurismoDeComprasDirigidasAComercios> rdf:type owl:NamedIndividual ,
+                                                                                                                                                              <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                     rdfs:label "Subenciones para la promoción del turismo de compras dirigidas a comercios"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#subenciones_para_la_realizacion_de_proyectos_de_innovacion_social_2016
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#subenciones_para_la_realizacion_de_proyectos_de_innovacion_social_2016> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                    <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                           rdfs:label "Subenciones para la realización de proyectos de innovacion social 2016"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#sugerencias
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#sugerencias> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                rdfs:label "Sugerencias"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#transferenciaInterVivosDelDerechoDeOcupacionDeUnPuestoEnUnMercado
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#transferenciaInterVivosDelDerechoDeOcupacionDeUnPuestoEnUnMercado> rdf:type owl:NamedIndividual ,
+                                                                                                                                                               <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                      rdfs:label "Transferencia inter vivos del derecho de ocupación de un puesto en un mercado..."@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#transferencia_mortis_causa_del_derecho_de_ocupacion_de_un_puesto_en_un_mercado
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#transferencia_mortis_causa_del_derecho_de_ocupacion_de_un_puesto_en_un_mercado> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                            <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                                                   rdfs:label "Transferencia mortis causa del derecho de ocupación de un puesto en un mercado..."@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#traspasoDePuestoDeVentaEnUnMercadoMunicipalDeDistrito
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#traspasoDePuestoDeVentaEnUnMercadoMunicipalDeDistrito> rdf:type owl:NamedIndividual ,
+                                                                                                                                                   <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                                                          rdfs:label "Traspaso de puesto de venta en un mercado municipal de distrito"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#valenciaActivaEmplea2017
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#valenciaActivaEmplea2017> rdf:type owl:NamedIndividual ,
+                                                                                                                      <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento> ;
+                                                                                                             rdfs:label "Valencia activa emplea 2017"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoComision#NoPermanente
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoComision#NoPermanente> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoComision> ;
+                                                                                                rdfs:label "No permanente"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#aprobacionDeResolucion
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#aprobacionDeResolucion> rdf:type owl:NamedIndividual ,
+                                                                                                                <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto> ;
+                                                                                                       rdfs:label "Aprobación de resolución"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#aprobacionDelActa
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#aprobacionDelActa> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto> ;
+                                                                                                  rdfs:label "Arobación del acta"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#conPropuesta
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#conPropuesta> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto> ;
+                                                                                             rdfs:label "Con propuesta"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#darCuenta
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#darCuenta> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto> ;
+                                                                                          rdfs:label "Dar cuenta"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#declaracionDeUrgencia
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#declaracionDeUrgencia> rdf:type owl:NamedIndividual ,
+                                                                                                               <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto> ;
+                                                                                                      rdfs:label "Declaración de urgencia"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#declaracionInstitucional
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#declaracionInstitucional> rdf:type owl:NamedIndividual ,
+                                                                                                                  <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto> ;
+                                                                                                         rdfs:label "Declaración institucional"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#interpelacion
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#interpelacion> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto> ;
+                                                                                              rdfs:label "Interpelación"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#mocion
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#mocion> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto> ;
+                                                                                       rdfs:label "Moción"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#mocionUrgente
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#mocionUrgente> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto> ;
+                                                                                              rdfs:label "Moción urgente"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#otro
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#otro> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto> ;
+                                                                                     rdfs:label "Otro"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#pregunta
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#pregunta> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto> ;
+                                                                                         rdfs:label "Pregunta"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#respuestaDePregunta
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#respuestaDePregunta> rdf:type owl:NamedIndividual ,
+                                                                                                             <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto> ;
+                                                                                                    rdfs:label "Respuesta de pregunta"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#ruego
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#ruego> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto> ;
+                                                                                      rdfs:label "Ruego"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto#AFavor
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto#AFavor> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Voto> ;
+                                                                                  rdfs:label "A favor"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto#Abstencion
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto#Abstencion> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Voto> ;
+                                                                                      rdfs:label "Abstensión"@es .
+
+
+###  http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto#EnContra
+<http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto#EnContra> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Voto> ;
+                                                                                    rdfs:label "En contra"@es .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.civichackers.cc/def/plenosAyuntamiento/pav_ontology#isMemberOf> rdfs:comment "Inidca la pertenencia de una persona a un grupo"@es ,
+                                                                                         "Links one Political Group with its members"^^xsd:string ;
+                                                                            rdfs:label "es miembro de"@es .
+
+
+<http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf> rdfs:comment "A relation between collections and entities, e.g. 'my collection of saxophones includes an old Adolphe Sax original alto' (i.e. my collection has member an Adolphe Sax alto)."@en .
+
+
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role> rdfs:comment "Rol de un representante ciudadano en el pleno, ej. Alcalde, Concejal"@es ;
+                                                                   rdfs:label "Rol"@es .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

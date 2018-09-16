@@ -1,0 +1,3401 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.2-SNAPSHOT), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "es", "undefined" ],
+    "baseIris" : [ "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl", "http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl", "http://www.w3.org/2000/01/rdf-schema", "http://geo.linkeddata.es/ontology", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://dbpedia.org/ontology", "http://xmlns.com/foaf/0.1", "http://purl.org/dc/dcmitype" ],
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#",
+    "labels" : {
+      "es" : "Sesiones de Plenos Municipales"
+    },
+    "comments" : {
+      "es" : "Ontología que modela elementos de un pleno municipal"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by-nc-sa/2.0/",
+        "type" : "label"
+      } ],
+      "hasVersion" : [ {
+        "identifier" : "hasVersion",
+        "language" : "es",
+        "value" : "1.0",
+        "type" : "label"
+      } ],
+      "hasAuthor" : [ {
+        "identifier" : "hasAuthor",
+        "language" : "es",
+        "value" : "Área Hackers Cívics",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 37,
+    "objectPropertyCount" : 66,
+    "datatypePropertyCount" : 23,
+    "individualCount" : 104
+  },
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "48",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "50",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "64",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "44",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "40",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "99",
+    "type" : "owl:Class"
+  }, {
+    "id" : "103",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "117",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "85",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "123",
+    "type" : "owl:Class"
+  }, {
+    "id" : "127",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "142",
+    "type" : "owl:Class"
+  }, {
+    "id" : "132",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "145",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "157",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "158",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "121",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "147",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "20",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Procedimiento",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Procedimiento",
+      "es" : "Procedimiento"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#publicacionEnElTablonDeEdictosDelAyuntamientoDeValencia",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "publicacionEnElTablonDeEdictosDelAyuntamientoDeValencia",
+        "es" : "Publicación en el tablón de edictos del Ayuntamiento de Valencia"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#subencionDerivadaDeConvenioDeAutogestion",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "subencionDerivadaDeConvenioDeAutogestion",
+        "es" : "Subención derivada de convenios de autogestión"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#sinEspecificar",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "sinEspecificar",
+        "es" : "Sin especificar"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#valenciaActivaEmplea2017",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "valenciaActivaEmplea2017",
+        "es" : "Valencia activa emplea 2017"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#ayudasMunicipalesValenciaActivaEmpren2017",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "ayudasMunicipalesValenciaActivaEmpren2017",
+        "es" : "Ayudas municipales Valencia activa empren 2017"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reclamacionesoDenunciasEnMateriaDeConsumo",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "reclamacionesoDenunciasEnMateriaDeConsumo",
+        "es" : "Reclamaciones o denuncias en materia de consumo"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#autorizacionObrasEnUnPuestoDeMercadoMunicipalDeDistrito",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "autorizacionObrasEnUnPuestoDeMercadoMunicipalDeDistrito",
+        "es" : "Autorización de obras en un puesto de mercado municipal de distrito"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#abonoaAsociacionesDeMercadosAutogestionadosDeDeudasDeAntiguosTit",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "abonoaAsociacionesDeMercadosAutogestionadosDeDeudasDeAntiguosTit",
+        "es" : "Abono a asociaciones de mercados autogestionados de deudas de antiguos tit..."
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#accesoaLaInformacionDeLaLeyDeTransparencia",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "accesoaLaInformacionDeLaLeyDeTransparencia",
+        "es" : "Acceso a la información de la ley de transparencia"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#modificacionDeHorarioDeAperturaEnUnMercadoMunicipalDeDistrito",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "modificacionDeHorarioDeAperturaEnUnMercadoMunicipalDeDistrito",
+        "es" : "Modificación de horario de apertura en un mercado municipal de distrito"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#autorizacionDeUsoTemporalDeLosDespachosLocalesUbicadosEnElCentro",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "autorizacionDeUsoTemporalDeLosDespachosLocalesUbicadosEnElCentro",
+        "es" : "Autorización de uso temporal de los despachos/locales ubicados en el centro"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#denuncias",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "denuncias",
+        "es" : "Denuncias"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#altayMantenimientoEnFicheroDeAcreedoresCesionariosPersonalPropio",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "altayMantenimientoEnFicheroDeAcreedoresCesionariosPersonalPropio",
+        "es" : "Alta y mantenimiento en fichero de acreedores cesionarios personal propio"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#modificacion_tarifas_de_mercados_autogestionados",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "modificacion_tarifas_de_mercados_autogestionados",
+        "es" : "Modificación tarifas de mercados autogestionados"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#solicitudDeHojasDeReclamacionesDeConsumoPorLosEmpresariosComerc",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "solicitudDeHojasDeReclamacionesDeConsumoPorLosEmpresariosComerc",
+        "es" : "Solicitud de hojas de reclamaciones de consumo por los empresarios, comerc"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#solicitudDeInformacion",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "solicitudDeInformacion",
+        "es" : "Solicitud de información"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#actividadDeDegustacionEnPuestoDeMercadoMunicipal",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "actividadDeDegustacionEnPuestoDeMercadoMunicipal",
+        "es" : "Actividad de degustación en puesto de mercado municipal"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#ayudasMunicipalesValenciaActivaImpulsEconomic2017",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "ayudasMunicipalesValenciaActivaImpulsEconomic2017",
+        "es" : "Ayudas municipales Valencia activa impuls economic 2017"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#transferencia_mortis_causa_del_derecho_de_ocupacion_de_un_puesto_en_un_mercado",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "transferencia_mortis_causa_del_derecho_de_ocupacion_de_un_puesto_en_un_mercado",
+        "es" : "Transferencia mortis causa del derecho de ocupación de un puesto en un mercado..."
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#transferenciaInterVivosDelDerechoDeOcupacionDeUnPuestoEnUnMercado",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "transferenciaInterVivosDelDerechoDeOcupacionDeUnPuestoEnUnMercado",
+        "es" : "Transferencia inter vivos del derecho de ocupación de un puesto en un mercado..."
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#peticionDeCopiasyCertificacionesDeAcuerdos",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "peticionDeCopiasyCertificacionesDeAcuerdos",
+        "es" : "Petición de copias y certificaciones de acuerdos"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#premiosInnovacionSocialCiudadDeValencia2016",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "premiosInnovacionSocialCiudadDeValencia2016",
+        "es" : "Premios innovación social Ciudad de Valencia 2016"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reclamacionDeResponsabilidadPatrimonial",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "reclamacionDeResponsabilidadPatrimonial",
+        "es" : "Reclamación de responsabilidad patrimonial"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#cambioDelEpigrafeDeVentaEnPuestosDeLosMercadosMunicipalesDeDistrito",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "cambioDelEpigrafeDeVentaEnPuestosDeLosMercadosMunicipalesDeDistrito",
+        "es" : "Cambio del epígrafe de venta en puestos de los mercados municipales de distrito..."
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#becasDeFormacionEnElMarcoDelProgramaDePracticasFormativasParaJovenes",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "becasDeFormacionEnElMarcoDelProgramaDePracticasFormativasParaJovenes",
+        "es" : "Becas de formación en el marco del programa de prácticas formativas para jóvenes"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#traspasoDePuestoDeVentaEnUnMercadoMunicipalDeDistrito",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "traspasoDePuestoDeVentaEnUnMercadoMunicipalDeDistrito",
+        "es" : "Traspaso de puesto de venta en un mercado municipal de distrito"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#renunciaALaTitularidadDeUnPuestoEnUnMercadoMunicipalDeDistrito",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "renunciaALaTitularidadDeUnPuestoEnUnMercadoMunicipalDeDistrito",
+        "es" : "Renuncia a la titularidad de un puesto en un mercado municipal de distrito"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#solicitudDeArbitrajeDeConsumo",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "solicitudDeArbitrajeDeConsumo",
+        "es" : "Solicitud de arbitraje de consumo"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#alegaciones",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "alegaciones",
+        "es" : "Alegaciones"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#certificadoDeInscripcionEnLaAgenciaDeColocacionaPunt",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "certificadoDeInscripcionEnLaAgenciaDeColocacionaPunt",
+        "es" : "Certificado de inscripción en la agencia de colocación a punt"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#subencionesParaLaPromocionDelTurismoDeComprasDirigidasAComercios",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "subencionesParaLaPromocionDelTurismoDeComprasDirigidasAComercios",
+        "es" : "Subenciones para la promoción del turismo de compras dirigidas a comercios"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#ejercicioDelDerechoDePeticion",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "ejercicioDelDerechoDePeticion",
+        "es" : "Ejercicio del derecho de petición"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reclamacionesYQuejas",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "reclamacionesYQuejas",
+        "es" : "Reclamaciones y quejas"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#subenciones_para_la_realizacion_de_proyectos_de_innovacion_social_2016",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "subenciones_para_la_realizacion_de_proyectos_de_innovacion_social_2016",
+        "es" : "Subenciones para la realización de proyectos de innovacion social 2016"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#agenciaDeColocacionDelAyuntamientoDeValenciaTratamientoDeOfertasDe",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "agenciaDeColocacionDelAyuntamientoDeValenciaTratamientoDeOfertasDe",
+        "es" : "Agencia de colocación del Ayuntamiento de Valencia: tratamiento de ofertas de ..."
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#gestionDeLaRepresentacionElectronicaParaGestionesaTravesDeInternet",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "gestionDeLaRepresentacionElectronicaParaGestionesaTravesDeInternet",
+        "es" : "Gestión de la representación electrónica para gestiones a traves de internet"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#ayudasSeedVlcemprende2014",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "ayudasSeedVlcemprende2014",
+        "es" : "Ayudas SEED VLCEMPRENDE 2014"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#itinerarioParaLaCreacionyConsolidacionDeEmpresas",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "itinerarioParaLaCreacionyConsolidacionDeEmpresas",
+        "es" : "Itinerario para la creación y consolidación de empresas"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#modificaciónDeLosDatosPersonalesQueAparecenEnLaSedeElectronica",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "modificaciónDeLosDatosPersonalesQueAparecenEnLaSedeElectronica",
+        "es" : "Modificación de los datos personales que aparecen en la sede electrónica"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#aportaciónDeDocumentaciónaSolicitudesExpedientesYaEnTrámitePorElAyuntamiento",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "aportaciónDeDocumentaciónaSolicitudesExpedientesYaEnTrámitePorElAyuntamiento",
+        "es" : "Aportación de documentación a solicitudes/expedientes ya en trámite por el ayuntamiento"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#recursos",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "recursos",
+        "es" : "Recursos"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#expedicionDeCarneDeVendedoraDeMercadoMunicipalDeDistrito",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "expedicionDeCarneDeVendedoraDeMercadoMunicipalDeDistrito",
+        "es" : "Expedición de carné de vendedor_a de mercado municipal de distrito"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#autorizacionDeDependienteParaEjercerLaVentaEnUnPuestoDeMercado",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "autorizacionDeDependienteParaEjercerLaVentaEnUnPuestoDeMercado",
+        "es" : "Autorización de dependiente para ejercer la venta en un puesto de mercado"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reparacionDeDeficienciasEnViaPublicaServicioValenciaSiempreNueva",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "reparacionDeDeficienciasEnViaPublicaServicioValenciaSiempreNueva",
+        "es" : "Reparación de deficiencias en vía pública - servicio \"Valencia siempre nueva\""
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#agenciaDeColocacionDelAyuntamientoDeValenciaSolicitudDeDemandaDeE",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "agenciaDeColocacionDelAyuntamientoDeValenciaSolicitudDeDemandaDeE",
+        "es" : "Agencia de colocación del Ayuntamiento de Valencia: solicitud de demanda de e..."
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#realizacionDeActividadExtraordinariaEnUnMercadoMunicipalDeDistrito",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "realizacionDeActividadExtraordinariaEnUnMercadoMunicipalDeDistrito",
+        "es" : "Realización de actividad extraordinaria en un mercado municipal de distrito"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#sugerencias",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento",
+      "labels" : {
+        "IRI-based" : "sugerencias",
+        "es" : "Sugerencias"
+      }
+    } ],
+    "comment" : {
+      "es" : "Tipo de Procedimiento de un expediente"
+    },
+    "id" : "0"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoExpediente",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TipoExpediente",
+      "es" : "Tipo de Expediente"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Adquisiciones",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "Adquisiciones"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Alegaciones",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "Alegaciones"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ActaRecepcion",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "ActaRecepcion"
+      }
+    } ],
+    "comment" : {
+      "es" : "Diferentes tipos que puede tener un Expediente"
+    },
+    "id" : "13"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Alcalde",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Alcalde",
+      "es" : "Alcalde"
+    },
+    "comment" : {
+      "es" : "Máxima autoridad de un municipio, generalmente está encargado de presidir los plenos del ayuntamiento"
+    },
+    "id" : "17",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Agent",
+    "equivalent" : [ "20" ],
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent",
+      "es" : "Agente"
+    },
+    "comment" : {
+      "es" : "Una entidad, sea esta una persona, un grupo, un software o cualquiere objeto físico"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Funcionario",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Funcionario",
+      "es" : "Funcionario"
+    },
+    "comment" : {
+      "es" : "Personas que portan conocimiento y documentación necesaria a un expediente y que sirve para el desarrollo de un determinado punto del orden del día"
+    },
+    "id" : "29",
+    "superClasses" : [ "30" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "32", "36", "37" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "49", "10" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "48"
+  }, {
+    "instances" : 0,
+    "union" : [ "49", "10" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Votacion",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Votacion",
+      "es" : "Votación"
+    },
+    "comment" : {
+      "es" : "Clase que permite describirl la relación entre los Representantes ciudadanos que expresan su Voto sobre un Punto del Orden del Día"
+    },
+    "id" : "52"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#MedioDifusión",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MedioDifusión",
+      "es" : "Medio de Difusión"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Boletin",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "Boletin",
+        "es" : "Tablón de Anuncios"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Web",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "Web"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RedesSociales",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "RedesSociales"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#MensajeriaInstantanea",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "MensajeriaInstantanea"
+      }
+    } ],
+    "comment" : {
+      "es" : "Canal de comunicación de los eventos de una sesión plenaria"
+    },
+    "id" : "7"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Voto",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Voto",
+      "es" : "Voto"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto#Abstencion",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto",
+      "labels" : {
+        "IRI-based" : "Abstencion",
+        "es" : "Abstensión"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto#AFavor",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto",
+      "labels" : {
+        "IRI-based" : "AFavor",
+        "es" : "A favor"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto#EnContra",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto",
+      "labels" : {
+        "IRI-based" : "EnContra",
+        "es" : "En contra"
+      }
+    } ],
+    "comment" : {
+      "es" : "Clase que permite indicar el voto expresado por un representante ciudadano, pudiendo ser a favor, en contra o abstención"
+    },
+    "id" : "60"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Entregable",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Entregable",
+      "es" : "Entregable"
+    },
+    "comment" : {
+      "es" : "Documento resultante de una sesión plenaria"
+    },
+    "id" : "6",
+    "superClasses" : [ "64" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "65",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "66",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Documento",
+    "equivalent" : [ "67" ],
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Documento",
+      "es" : "Documento"
+    },
+    "subClasses" : [ "6" ],
+    "comment" : {
+      "es" : "Clase para definir los documentos empleados en un punto del orden del día"
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "74",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Expediente",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Expediente",
+      "es" : "Expediente"
+    },
+    "comment" : {
+      "es" : "Expediente relacionado con un punto del orden del día y que abarca los documentos que sirven de sustento de dicho punto"
+    },
+    "id" : "15"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "19", "9", "30" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "77",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "78",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "15", "3" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Person",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person",
+      "es" : "Person"
+    },
+    "subClasses" : [ "18", "29", "80" ],
+    "comment" : {
+      "es" : "Clase que describe una persona"
+    },
+    "attributes" : [ "external" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "81",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoPunto",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TipoPunto",
+      "es" : "Tipo de Punto"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#mocion",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto",
+      "labels" : {
+        "IRI-based" : "mocion",
+        "es" : "Moción"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#aprobacionDeResolucion",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto",
+      "labels" : {
+        "IRI-based" : "aprobacionDeResolucion",
+        "es" : "Aprobación de resolución"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#pregunta",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto",
+      "labels" : {
+        "IRI-based" : "pregunta",
+        "es" : "Pregunta"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#interpelacion",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto",
+      "labels" : {
+        "IRI-based" : "interpelacion",
+        "es" : "Interpelación"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#conPropuesta",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto",
+      "labels" : {
+        "IRI-based" : "conPropuesta",
+        "es" : "Con propuesta"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#declaracionDeUrgencia",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto",
+      "labels" : {
+        "IRI-based" : "declaracionDeUrgencia",
+        "es" : "Declaración de urgencia"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#otro",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto",
+      "labels" : {
+        "IRI-based" : "otro",
+        "es" : "Otro"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#declaracionInstitucional",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto",
+      "labels" : {
+        "IRI-based" : "declaracionInstitucional",
+        "es" : "Declaración institucional"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#titulo",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "titulo",
+        "es" : "Título"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#aprobacionDelActa",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto",
+      "labels" : {
+        "IRI-based" : "aprobacionDelActa",
+        "es" : "Arobación del acta"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#mocionUrgente",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto",
+      "labels" : {
+        "IRI-based" : "mocionUrgente",
+        "es" : "Moción urgente"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#ruego",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto",
+      "labels" : {
+        "IRI-based" : "ruego",
+        "es" : "Ruego"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#respuestaDePregunta",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto",
+      "labels" : {
+        "IRI-based" : "respuestaDePregunta",
+        "es" : "Respuesta de pregunta"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#darCuenta",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto",
+      "labels" : {
+        "IRI-based" : "darCuenta",
+        "es" : "Dar cuenta"
+      }
+    } ],
+    "comment" : {
+      "es" : "Tipo que puede tener un punto de la sesión del pleno, como moción, pregunta, ruego, etc."
+    },
+    "id" : "87"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Asociacion",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Asociacion",
+      "es" : "Asociación"
+    },
+    "comment" : {
+      "es" : "Grupo de ciudadanos que representan un barrio o entidad y que pueden participar en un pleno municipal"
+    },
+    "id" : "83"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Ciudadano",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Ciudadano",
+      "es" : "Ciudadano"
+    },
+    "comment" : {
+      "es" : "Persona que puede presentar ruegos en una sesión del pleno del ayuntamiento"
+    },
+    "id" : "80",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Debate",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Debate",
+      "es" : "Debate"
+    },
+    "comment" : {
+      "es" : "Indica la relación entre los representantes ciudadanos que exponen sus puntos de vista sobre los diferentes asuntos tratados en una sesión del pleno"
+    },
+    "id" : "2"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#CaracterSesion",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CaracterSesion",
+      "es" : "Carácter de la Sesión"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#Ordinaria",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion",
+      "labels" : {
+        "IRI-based" : "Ordinaria",
+        "es" : "Ordinaria"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#Extraordinaria",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion",
+      "labels" : {
+        "IRI-based" : "Extraordinaria",
+        "es" : "Extraordinaria"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#ExtraordinariaUrgente",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion",
+      "labels" : {
+        "IRI-based" : "ExtraordinariaUrgente",
+        "es" : "Extraordinaria urgente"
+      }
+    } ],
+    "comment" : {
+      "es" : "Clasifica a una sesión como ordinaria, extraordinara o extraordinaria urgente"
+    },
+    "id" : "99"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Collection",
+      "en" : "Collection"
+    },
+    "subClasses" : [ "9" ],
+    "comment" : {
+      "undefined" : "Any container for entities that share one or more common properties. E.g. \"stone objects\", \"the nurses\", \"the Louvre Aegyptian collection\". A collection is not a logical class: a collection is a first-order entity, while a class is a second-order one."
+    },
+    "attributes" : [ "external" ],
+    "id" : "103"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#SesionPleno",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SesionPleno",
+      "es" : "Sesión del Pleno del Ayuntamiento"
+    },
+    "comment" : {
+      "es" : "Sesiones en las que se tratan varios asuntos de interés para la ciudadanía"
+    },
+    "id" : "12"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PuntoOrdenDia",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PuntoOrdenDia",
+      "es" : "Punto del Orden del Día"
+    },
+    "comment" : {
+      "es" : "Asuntos que se tratan en una sesión del pleno del ayuntamiento"
+    },
+    "id" : "3"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "117",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "86",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "98",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "71",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "83", "9", "56", "30" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "76",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#RepresentanteCiudadano",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RepresentanteCiudadano",
+      "es" : "Representante Ciudadano"
+    },
+    "subClasses" : [ "17", "89" ],
+    "comment" : {
+      "es" : "Personas que interactúan de forma directa durante el desarrollo del pleno, y son los encargados de tomar decisiones"
+    },
+    "id" : "18",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://purl.org/dc/terms/FileFormat",
+    "baseIri" : "http://purl.org/dc/terms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FileFormat",
+      "es" : "Formato de Archivo"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TXT",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "TXT"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#XLSX",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "XLSX"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#PDF",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "PDF"
+      }
+    } ],
+    "comment" : {
+      "es" : "Formato de los archivos que forman parte del expediente"
+    },
+    "attributes" : [ "external" ],
+    "id" : "123"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ModoAcceso",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ModoAcceso",
+      "es" : "Modo de Acceso"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#EnLinea",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "EnLinea"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Presencial",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "Presencial"
+      }
+    } ],
+    "comment" : {
+      "es" : "Formas de acceder a una sesión del Pleno"
+    },
+    "id" : "127"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#GrupoPolitico",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GrupoPolitico",
+      "es" : "Grupo Político"
+    },
+    "comment" : {
+      "es" : "Grupo político que tiene parte en el pleno municipal"
+    },
+    "id" : "9",
+    "superClasses" : [ "103" ]
+  }, {
+    "iri" : "http://geo.linkeddata.es/ontology/Provincia",
+    "baseIri" : "http://geo.linkeddata.es/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Provincia",
+      "es" : "Provincia"
+    },
+    "comment" : {
+      "es" : "Entidad subnacional por lo general inmediatamente inferior al Estado"
+    },
+    "attributes" : [ "external" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoComision",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TipoComision",
+      "es" : "Tipo de comisión"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoComision#NoPermanente",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoComision",
+      "labels" : {
+        "IRI-based" : "NoPermanente",
+        "es" : "No permanente"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#Permanente",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion",
+      "labels" : {
+        "IRI-based" : "Permanente",
+        "es" : "Permanente"
+      }
+    } ],
+    "comment" : {
+      "es" : "Tipos de comisiones de un pleno municipal"
+    },
+    "id" : "55"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionRepresentante",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ComisionRepresentante",
+      "es" : "Comisión - Representante"
+    },
+    "comment" : {
+      "es" : "Relación ternaria que indica que representantes forman parte de las diferentes comisiones y sus periodos"
+    },
+    "id" : "49"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Accesibilidad",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Accesibilidad",
+      "es" : "Accesibilidad"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#AudioDescripcion",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "AudioDescripcion"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Transcripcion",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "Transcripcion"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#LecturaFacil",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "LecturaFacil",
+        "es" : "Lectura Fácil"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#LenguajeDeSignos",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "LenguajeDeSignos"
+      }
+    } ],
+    "comment" : {
+      "es" : "Sistemas de accesibilidad relacionados al orden del día y al acta de la sesión del Pleno"
+    },
+    "id" : "142"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TipoDocumento",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TipoDocumento",
+      "es" : "Tipo de Documento"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Enmienda",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "Enmienda"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Informe",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "Informe"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Iniciativa",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "Iniciativa"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Certificado",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "Certificado"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Notificacion",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "Notificacion"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Comunicacion",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "Comunicacion",
+        "es" : "Comunicación"
+      }
+    } ],
+    "comment" : {
+      "es" : "Tipos de documentos que pueden ser presentados como sustento para un punto del orden del día"
+    },
+    "id" : "132"
+  }, {
+    "iri" : "http://geo.linkeddata.es/ontology/Municipio",
+    "baseIri" : "http://geo.linkeddata.es/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Municipio",
+      "es" : "Municipio"
+    },
+    "comment" : {
+      "es" : "Entidad administrativa que puede agrupar una sola localidad o varias, que puede hacer referencia a una ciudad, pueblo o aldea."
+    },
+    "attributes" : [ "external" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://purl.org/dc/dcmitype/Software",
+    "baseIri" : "http://purl.org/dc/dcmitype",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Software",
+      "es" : "Software"
+    },
+    "comment" : {
+      "es" : "Equipamiento lógico o soporte lógico de un sistema informático, que comprende el conjunto de los componentes lógicos necesarios que hacen posible la realización de tareas específicas como almacenamiento y gestion de la documentación empleada en el punto del orden del día de una sesión del Pleno."
+    },
+    "attributes" : [ "external" ],
+    "id" : "36"
+  }, {
+    "instances" : 0,
+    "union" : [ "18", "29" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "145"
+  }, {
+    "instances" : 0,
+    "union" : [ "6", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "157"
+  }, {
+    "instances" : 0,
+    "union" : [ "6", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "158"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Concejal",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Concejal",
+      "es" : "Concejal"
+    },
+    "comment" : {
+      "es" : "Representante elegido por el pueblo para participar en los plenos municipales y tomar decisiones que beneficien a la ciudadanía, entre otros."
+    },
+    "id" : "89",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "64", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Portavoz",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Portavoz",
+      "es" : "Portavoz"
+    },
+    "comment" : {
+      "es" : "Clase que define la relación entre los grupos políticos y sus representantes en un determinado periodo"
+    },
+    "id" : "10"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "121",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "18", "29" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "147"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#Comision",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Comision",
+      "es" : "Comisión"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionFinanciera",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "ComisionFinanciera"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionInformativa",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "ComisionInformativa",
+        "es" : "Comisión Informativa"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionCuentas",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "ComisionCuentas",
+        "es" : "Comisión especial de cuentas"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#ComisionDeUIV",
+      "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+      "labels" : {
+        "IRI-based" : "ComisionDeUIV",
+        "es" : "Comisión de Urbanismo, Infraestructura y Vivienda"
+      }
+    } ],
+    "comment" : {
+      "es" : "Comisiones formadas en el pleno para tratar asuntos específicos"
+    },
+    "id" : "56"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Document",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Document",
+      "es" : "Documento"
+    },
+    "comment" : {
+      "es" : "Cualquier documento físico o electrónico"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl#Agent",
+    "equivalent" : [ "19" ],
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent",
+      "es" : "Agente"
+    },
+    "comment" : {
+      "es" : "Una entidad, sea esta una persona, un grupo, un software o cualquiere objeto físico"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#EstadoPuntoOD",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EstadoPuntoOD",
+      "es" : "Estado Punto Orden del Día"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#AprobadoConEnmienda",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD",
+      "labels" : {
+        "IRI-based" : "AprobadoConEnmienda",
+        "es" : "Aprobado con enmienda"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#Aprobado",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD",
+      "labels" : {
+        "IRI-based" : "Aprobado",
+        "es" : "Aprobado"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#PreguntaContestada",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD",
+      "labels" : {
+        "IRI-based" : "PreguntaContestada",
+        "es" : "Pregunta contestada"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#Rechazado",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD",
+      "labels" : {
+        "IRI-based" : "Rechazado",
+        "es" : "Rechazado"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#QuedarEnterado",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD",
+      "labels" : {
+        "IRI-based" : "QuedarEnterado",
+        "es" : "Quedar enterado"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#AprobadaPropuestaAlternativa",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD",
+      "labels" : {
+        "IRI-based" : "AprobadaPropuestaAlternativa",
+        "es" : "Aprobada propuesta alternativa"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#SobreLaMesa",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD",
+      "labels" : {
+        "IRI-based" : "SobreLaMesa",
+        "es" : "Sobre la mesa"
+      }
+    }, {
+      "iri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#AContestarEnProximaSesion",
+      "baseIri" : "http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD",
+      "labels" : {
+        "IRI-based" : "AContestarEnProximaSesion",
+        "es" : "A contestar en próxima sesión"
+      }
+    } ],
+    "comment" : {
+      "es" : "Estado de un punto del orden del día, puede ser aprobado, rechazado, entre otros"
+    },
+    "id" : "22"
+  } ],
+  "property" : [ {
+    "id" : "1",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "106",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "107",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "102",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "109",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "110",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "114",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "115",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "116",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "119",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "120",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "122",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "124",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "125",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "128",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "130",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "131",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "129",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "134",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "135",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "137",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "138",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "140",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "141",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "143",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "111",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "139",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "144",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "146",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "148",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "149",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "150",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "151",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "153",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "154",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "152",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "155",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "159",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "160",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "133",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "161",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "162",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "163",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "164",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "165",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "126",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "166",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "168",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "167",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "136",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "169",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "170",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "171",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "156",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esDebateDe",
+    "inverse" : "4",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "esDebateDe",
+      "es" : "Es debate de"
+    },
+    "domain" : "2",
+    "comment" : {
+      "es" : "Relaciona un debate con un punto del orden del día"
+    },
+    "attributes" : [ "object" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#difundidoPor",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "difundidoPor",
+      "es" : "Difundido por"
+    },
+    "domain" : "6",
+    "comment" : {
+      "es" : "Indica el Entregable y su medio de difusión"
+    },
+    "attributes" : [ "object" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneDebate",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "tieneDebate",
+      "es" : "Tiene Debate"
+    },
+    "domain" : "3",
+    "comment" : {
+      "es" : "Relación entre un punto del orden del día y su respectivo debate"
+    },
+    "attributes" : [ "object" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tienePortavoz",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "tienePortavoz",
+      "es" : "Tiene Portavoz"
+    },
+    "domain" : "9",
+    "comment" : {
+      "es" : "Propiedad que permite definir la relación ternaria entre un grupo político, el concejal que lo representa en calidad de portavoz y el periodo de representación"
+    },
+    "attributes" : [ "object" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esTipoExpedienteDe",
+    "inverse" : "16",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "esTipoExpedienteDe",
+      "es" : "Es tipo de expediente de"
+    },
+    "domain" : "13",
+    "comment" : {
+      "es" : "Indica que expedientes son de un determinado tipo"
+    },
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneEstado",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "tieneEstado",
+      "es" : "Tiene Estado"
+    },
+    "domain" : "3",
+    "comment" : {
+      "es" : "Relación entre un punto del orden del día y su respectivo estado"
+    },
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://purl.org/dc/terms/date",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "date",
+      "es" : "Fecha"
+    },
+    "domain" : "24",
+    "comment" : {
+      "es" : "Indica la fecha en la que ocurrió un evento"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esEstadoDe",
+    "inverse" : "21",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "esEstadoDe",
+      "es" : "Es estado de"
+    },
+    "domain" : "22",
+    "comment" : {
+      "es" : "Relación que permite indicar que puntos del orden del día tienen un estado específico"
+    },
+    "attributes" : [ "object" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://dbpedia.org/ontology/population",
+    "baseIri" : "http://dbpedia.org/ontology",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "population",
+      "es" : "Población"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "Población humana, (del latín tardío populatio, -?nis, en latín 'saqueo', 'devastación') en geografía y sociología es el grupo de personas que viven en un área o espacio geográfico. Población biológica es el conjunto de individuos de la misma especie que habita una extensión determinada en un momento dado"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoProcedimiento",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "tieneTipoProcedimiento",
+      "es" : "Tipo procedimiento"
+    },
+    "domain" : "15",
+    "comment" : {
+      "es" : "Especifica el tipo de procedimiento con el que ha sido creado un expediente"
+    },
+    "attributes" : [ "object" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#asunto",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "asunto",
+      "es" : "Asunto"
+    },
+    "domain" : "40",
+    "comment" : {
+      "es" : "Breve descripción sobre un punto del orden del día"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#correo",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "correo",
+      "es" : "Correo electrónico"
+    },
+    "domain" : "44",
+    "comment" : {
+      "es" : "correo electrónico de una persona o entidad"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#numeroExpediente",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "numeroExpediente",
+      "es" : "Código de expediente"
+    },
+    "domain" : "15",
+    "comment" : {
+      "es" : "Número del expediente asociado a un punto del orden del día"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esTipoComisionDe",
+    "inverse" : "57",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "esTipoComisionDe",
+      "es" : "Es tipo comisión de"
+    },
+    "domain" : "55",
+    "comment" : {
+      "es" : "Relaciona los tipos de comisión con aquellas comisiones que pertenecen a cada tipo"
+    },
+    "attributes" : [ "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#perteneceA",
+    "inverse" : "59",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "perteneceA",
+      "es" : "Pertenece A"
+    },
+    "domain" : "12",
+    "comment" : {
+      "es" : "Relaciona una sesión del Pleno con el municipio que la desarrolla"
+    },
+    "attributes" : [ "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#difunde",
+    "inverse" : "5",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "difunde",
+      "es" : "Difunde"
+    },
+    "domain" : "7",
+    "comment" : {
+      "es" : "Indica cómo o qué medio de difusión dió a conocer un entregable"
+    },
+    "attributes" : [ "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#fechaFin",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "fechaFin",
+      "es" : "Fecha de Finalización"
+    },
+    "domain" : "48",
+    "comment" : {
+      "es" : "Fecha de Finalización de un período"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#perfil",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "perfil",
+      "es" : "Perfil"
+    },
+    "domain" : "18",
+    "comment" : {
+      "es" : "Enlace al perfil o curriculum de una persona"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://dbpedia.org/ontology#isPartOf",
+    "inverse" : "69",
+    "baseIri" : "http://dbpedia.org/ontology",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "isPartOf",
+      "es" : "es parte de"
+    },
+    "domain" : "64",
+    "comment" : {
+      "es" : "propiedad para relacionar el todo con sus partes"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#retransmision",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "retransmision",
+      "es" : "Retransmisión"
+    },
+    "domain" : "11",
+    "comment" : {
+      "es" : "Retransmisión de una sesión de un pleno o de una parte de esta"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://purl.org/dc/terms/created",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "73",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "iri"
+      } ],
+      "hasVersion" : [ {
+        "identifier" : "hasVersion",
+        "language" : "undefined",
+        "value" : "http://dublincore.org/usage/terms/history/#created-003",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "created",
+      "en" : "Date Created",
+      "es" : "Fecha de creación"
+    },
+    "domain" : "64",
+    "comment" : {
+      "en" : "Date of creation of the resource.",
+      "es" : "fecha que indica cuando una persona crea un documento"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#hasPart",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "hasPart",
+      "es" : "tiene parte"
+    },
+    "domain" : "15",
+    "comment" : {
+      "es" : "una entidad esta formada por una segunda entidad, entre otros"
+    },
+    "attributes" : [ "object" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/lastName",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "76",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "lastName",
+      "es" : "Apellido",
+      "undefined" : "lastName"
+    },
+    "domain" : "30",
+    "comment" : {
+      "undefined" : "The last name of a person."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#generaEntregable",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "generaEntregable",
+      "es" : "Genera Entregable"
+    },
+    "domain" : "12",
+    "comment" : {
+      "es" : "Indica el entregable que ha sido generado por una sesión del pleno"
+    },
+    "attributes" : [ "object" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneAsociado",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "tieneAsociado",
+      "es" : "Tiene Asociado"
+    },
+    "domain" : "83",
+    "comment" : {
+      "es" : "Indica los ciudadanos que pertenecen a una asociación"
+    },
+    "attributes" : [ "object" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/name",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "86",
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "Nombre"
+    },
+    "domain" : "85",
+    "comment" : {
+      "en" : "A name for some thing"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoExpediente",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "tieneTipoExpediente",
+      "es" : "Tipo de Expediente"
+    },
+    "domain" : "15",
+    "comment" : {
+      "es" : "Indica el tipo de un expediente"
+    },
+    "attributes" : [ "object" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esRepresentanteDe",
+    "inverse" : "90",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "esRepresentanteDe",
+      "es" : "Es representante de"
+    },
+    "domain" : "89",
+    "comment" : {
+      "es" : "Relaciona un concejal con el grupo político del cual es portavoz"
+    },
+    "attributes" : [ "object" ],
+    "id" : "88"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#enlaceActa",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "enlaceActa",
+      "es" : "Enlace al acta"
+    },
+    "domain" : "12",
+    "comment" : {
+      "es" : "Incluye la url del sitio web donde se encuentra publicada el acta generada a partir de una sesión del pleno del ayuntamiento"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#archivadoEn",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "archivadoEn",
+      "es" : "Archivado En"
+    },
+    "domain" : "64",
+    "comment" : {
+      "es" : "Relaciona los documentos con su respectivo expediente"
+    },
+    "attributes" : [ "object" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esVotanteEn",
+    "inverse" : "94",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "esVotanteEn",
+      "es" : "Es votante en"
+    },
+    "domain" : "18",
+    "comment" : {
+      "es" : "Permite indicar un representante ciudadano que participa en la Votación de un punto del orden del día"
+    },
+    "attributes" : [ "object" ],
+    "id" : "93"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoPunto",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "87",
+    "label" : {
+      "IRI-based" : "tieneTipoPunto",
+      "es" : "Tipo de Punto"
+    },
+    "domain" : "3",
+    "comment" : {
+      "es" : "Indica el tipo de un punto del orden del día"
+    },
+    "attributes" : [ "object" ],
+    "id" : "95"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#nombre",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "nombre",
+      "es" : "Nombre"
+    },
+    "domain" : "35",
+    "comment" : {
+      "es" : "Nombre propio de una entidad"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "96"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#unidadAdministrativa",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "98",
+    "label" : {
+      "IRI-based" : "unidadAdministrativa",
+      "es" : "Unidad Administrativa"
+    },
+    "domain" : "29",
+    "comment" : {
+      "es" : "Unidad Administrativa en la que trabaja un funcionario público"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "97"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esPortavozDe",
+    "inverse" : "8",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "esPortavozDe",
+      "es" : "Es portavoz de"
+    },
+    "domain" : "10",
+    "comment" : {
+      "es" : "Relaciona un grupo político con su respectivo portavoz"
+    },
+    "attributes" : [ "object" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#estudia",
+    "inverse" : "102",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "estudia",
+      "es" : "Estudia"
+    },
+    "domain" : "56",
+    "comment" : {
+      "es" : "Relaciona las comisiones con los puntos del orden del día que le corresponden a esta"
+    },
+    "attributes" : [ "object" ],
+    "id" : "101"
+  }, {
+    "range" : "18",
+    "domain" : "89",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "104"
+  }, {
+    "range" : "18",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneVotacion",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "tieneVotacion",
+      "es" : "Tiene Votación"
+    },
+    "domain" : "3",
+    "comment" : {
+      "es" : "Indica la votación realizada sobre un punto del orden del día"
+    },
+    "attributes" : [ "object" ],
+    "id" : "106"
+  }, {
+    "range" : "103",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "107"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tratadoPor",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "tratadoPor",
+      "es" : "Tratado Por"
+    },
+    "domain" : "3",
+    "comment" : {
+      "es" : "Relaciona un punto del orden del día con la comisión a cargo de este"
+    },
+    "attributes" : [ "object" ],
+    "id" : "102"
+  }, {
+    "range" : "30",
+    "domain" : "80",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "108"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#fechaAlta",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "fechaAlta",
+      "es" : "Fecha de Alta"
+    },
+    "domain" : "15",
+    "comment" : {
+      "es" : "Fecha en la que se abrió  un expediente"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "109"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esMunicipioDe",
+    "inverse" : "111",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "esMunicipioDe",
+      "es" : "Es municipio de"
+    },
+    "domain" : "32",
+    "comment" : {
+      "es" : "Indica que un municipio pertenece a una provincia"
+    },
+    "attributes" : [ "object" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneCaracter",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "99",
+    "label" : {
+      "IRI-based" : "tieneCaracter",
+      "es" : "Tiene Carácter"
+    },
+    "domain" : "12",
+    "comment" : {
+      "es" : "Relaciona una sesión del pleno con su carácter (ordinaria, extraordinaria, extraordinaria urgente)"
+    },
+    "attributes" : [ "object" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneComision",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "tieneComision",
+      "es" : "Tiene Comisión"
+    },
+    "domain" : "49",
+    "comment" : {
+      "es" : "Indica la comisión a la que pertenece un representante ciudadano"
+    },
+    "attributes" : [ "object" ],
+    "id" : "113"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#asociadoA",
+    "inverse" : "82",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "asociadoA",
+      "es" : "Asociado A"
+    },
+    "domain" : "80",
+    "comment" : {
+      "es" : "Indica a que asociacíon pertenece un Ciudadano"
+    },
+    "attributes" : [ "object" ],
+    "id" : "114"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#fechaFinRepresentacion",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "fechaFinRepresentacion",
+      "es" : "Fecha de Finalización"
+    },
+    "domain" : "18",
+    "comment" : {
+      "es" : "Fecha de finalización del período de un representante ciudadano"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "115"
+  }, {
+    "range" : "30",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "116"
+  }, {
+    "range" : "30",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "118"
+  }, {
+    "range" : "64",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "119"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoComision",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "tieneTipoComision",
+      "es" : "Tiene tipo comisión"
+    },
+    "domain" : "56",
+    "comment" : {
+      "es" : "Indica el tipo al que pertenece una comisión"
+    },
+    "attributes" : [ "object" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://purl.org/dc/terms/title",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "121",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "iri"
+      } ],
+      "hasVersion" : [ {
+        "identifier" : "hasVersion",
+        "language" : "undefined",
+        "value" : "http://dublincore.org/usage/terms/history/#titleT-002",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "title",
+      "en" : "Title"
+    },
+    "domain" : "64",
+    "comment" : {
+      "en" : "A name given to the resource."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "120"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#enlcaceDebate",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "enlcaceDebate",
+      "es" : "Enlace al debate"
+    },
+    "domain" : "2",
+    "comment" : {
+      "es" : "Enlace a la página web donde está publicado un determinado debate"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "122"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esVotacionDe",
+    "inverse" : "106",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "esVotacionDe",
+      "es" : "Es votación de"
+    },
+    "domain" : "52",
+    "comment" : {
+      "es" : "Relaciona una votación con el punto del orden del día correspondiente"
+    },
+    "attributes" : [ "object" ],
+    "id" : "124"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#participaEn",
+    "inverse" : "126",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "participaEn",
+      "es" : "Participa En"
+    },
+    "domain" : "80",
+    "comment" : {
+      "es" : "Permite definir que ciudadanos participan en un determinado orden del día"
+    },
+    "attributes" : [ "object" ],
+    "id" : "125"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#AdscritoA",
+    "inverse" : "129",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "AdscritoA",
+      "es" : "Adscrito A"
+    },
+    "domain" : "18",
+    "comment" : {
+      "es" : "Indica que un representante ciudadano forma parte de un grupo político"
+    },
+    "attributes" : [ "object" ],
+    "id" : "128"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#sustentadoPor",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "67",
+    "label" : {
+      "IRI-based" : "sustentadoPor",
+      "es" : "Sustentado Por"
+    },
+    "domain" : "3",
+    "comment" : {
+      "es" : "Indica que la decisión sobre un punto del orden del día  se sustenta en cierto documento."
+    },
+    "attributes" : [ "object" ],
+    "id" : "130"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esTipoDocumentoDe",
+    "inverse" : "133",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "esTipoDocumentoDe",
+      "es" : "Es Tipo De Documento De"
+    },
+    "domain" : "132",
+    "comment" : {
+      "es" : "Indica que documentos son de un determinado tipo"
+    },
+    "attributes" : [ "object" ],
+    "id" : "131"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneSesion",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "tieneSesion",
+      "es" : "Tiene Sesion"
+    },
+    "domain" : "32",
+    "comment" : {
+      "es" : "Indica todas las sesiones del Pleno que se han desarrollado en un determinado municipio"
+    },
+    "attributes" : [ "object" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#TieneIntegrante",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "TieneIntegrante",
+      "es" : "Tiene Integrante"
+    },
+    "domain" : "9",
+    "comment" : {
+      "es" : "Indica que un grupo político esta formado por representantes ciudadanos."
+    },
+    "attributes" : [ "object" ],
+    "id" : "129"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esEntregableDe",
+    "inverse" : "79",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "esEntregableDe",
+      "es" : "Es Entregable De"
+    },
+    "domain" : "6",
+    "comment" : {
+      "es" : "Indica qué entregable es producido como resultado de una sesión del pleno"
+    },
+    "attributes" : [ "object" ],
+    "id" : "134"
+  }, {
+    "iri" : "http://purl.org/dc/terms/hasFormat",
+    "inverse" : "136",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "123",
+    "label" : {
+      "IRI-based" : "hasFormat",
+      "es" : "Tiene Formato"
+    },
+    "domain" : "64",
+    "comment" : {
+      "es" : "Indica los formatos de archivos que tiene un documento"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "135"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#gestionadoPor",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "gestionadoPor",
+      "es" : "Es Gestionado Por"
+    },
+    "domain" : "15",
+    "comment" : {
+      "es" : "Indica qué software se emplea para la gestión de expedientes."
+    },
+    "attributes" : [ "object" ],
+    "id" : "137"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esModoAccesoDe",
+    "inverse" : "139",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "esModoAccesoDe",
+      "es" : "Es Modo de Acceso De"
+    },
+    "domain" : "127",
+    "comment" : {
+      "es" : "Indica las formas de acceso a una sesión plenaria"
+    },
+    "attributes" : [ "object" ],
+    "id" : "138"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#descripcion",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "78",
+    "label" : {
+      "IRI-based" : "descripcion",
+      "es" : "Descripción"
+    },
+    "domain" : "64",
+    "comment" : {
+      "es" : "Describe un documento utilizado para sustentar un punto del orden del día"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "140"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esTipoPuntoDe",
+    "inverse" : "95",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "esTipoPuntoDe",
+      "es" : "Es tipo punto de"
+    },
+    "domain" : "87",
+    "comment" : {
+      "es" : "Indica que puntos del orden del día son de un determinado tipo"
+    },
+    "attributes" : [ "object" ],
+    "id" : "141"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneVotante",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "tieneVotante",
+      "es" : "Tiene votante"
+    },
+    "domain" : "52",
+    "comment" : {
+      "es" : "Relación que indica que representantes ciudadanos participan en una votación"
+    },
+    "attributes" : [ "object" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#gestiona",
+    "inverse" : "137",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "gestiona",
+      "es" : "Gestiona"
+    },
+    "domain" : "36",
+    "comment" : {
+      "es" : "Indica qué software se emplea para la gestión de expedientes."
+    },
+    "attributes" : [ "object" ],
+    "id" : "143"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneMunicipio",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "tieneMunicipio",
+      "es" : "Tiene municipio"
+    },
+    "domain" : "37",
+    "comment" : {
+      "es" : "Indica la provincia a la que pertenece el Municipio"
+    },
+    "attributes" : [ "object" ],
+    "id" : "111"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneModoAcceso",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "127",
+    "label" : {
+      "IRI-based" : "tieneModoAcceso",
+      "es" : "Tiene Modo de Acceso"
+    },
+    "domain" : "12",
+    "comment" : {
+      "es" : "Indica los modos de acceso que tiene una sesión plenaria"
+    },
+    "attributes" : [ "object" ],
+    "id" : "139"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#aportadoPor",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "145",
+    "label" : {
+      "IRI-based" : "aportadoPor",
+      "es" : "Aportado Por"
+    },
+    "domain" : "64",
+    "comment" : {
+      "es" : "Indica quíen aporta un documento como soporte a un punto del orden del día"
+    },
+    "attributes" : [ "object" ],
+    "id" : "144"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#aporta",
+    "inverse" : "144",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "aporta",
+      "es" : "Aporta"
+    },
+    "domain" : "147",
+    "comment" : {
+      "es" : "Indica quíen aporta un documento como soporte a un punto del orden del día"
+    },
+    "attributes" : [ "object" ],
+    "id" : "146"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#archiva",
+    "inverse" : "92",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "archiva",
+      "es" : "Archiva"
+    },
+    "domain" : "15",
+    "comment" : {
+      "es" : "Relaciona los expedientes con los documentos contenidos en este"
+    },
+    "attributes" : [ "object" ],
+    "id" : "148"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esMiembroDe",
+    "inverse" : "150",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "esMiembroDe",
+      "es" : "Es miembro de"
+    },
+    "domain" : "89",
+    "comment" : {
+      "es" : "Relaciona un concejal con la comisión a la que pertenece en un periodo de tiempo"
+    },
+    "attributes" : [ "object" ],
+    "id" : "149"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneMiembro",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "89",
+    "label" : {
+      "IRI-based" : "tieneMiembro",
+      "es" : "Tiene Miembro"
+    },
+    "domain" : "49",
+    "comment" : {
+      "es" : "Indica los concejales que pertenecen a una determinada comisión"
+    },
+    "attributes" : [ "object" ],
+    "id" : "150"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneRepresentante",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "89",
+    "label" : {
+      "IRI-based" : "tieneRepresentante",
+      "es" : "Representante"
+    },
+    "domain" : "10",
+    "comment" : {
+      "es" : "Indica el representante (concejal) de un grupo político que a su vez es el portavoz"
+    },
+    "attributes" : [ "object" ],
+    "id" : "90"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esVotoDe",
+    "inverse" : "152",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "esVotoDe",
+      "es" : "Es voto de"
+    },
+    "domain" : "60",
+    "comment" : {
+      "es" : "Relaciona un voto con la clase definida por la relación ternaria entre voto, representante y punto del orden del día"
+    },
+    "attributes" : [ "object" ],
+    "id" : "151"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#sustenta",
+    "inverse" : "130",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "sustenta",
+      "es" : "Sustenta"
+    },
+    "domain" : "67",
+    "comment" : {
+      "es" : "Indica que un documento sustenta la decisión sobre un punto del orden del día."
+    },
+    "attributes" : [ "object" ],
+    "id" : "153"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tienePuntoOD",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "tienePuntoOD",
+      "es" : "Tiene Punto de Orden del Día"
+    },
+    "domain" : "12",
+    "comment" : {
+      "es" : "Relaciona una sesión con los puntos del orden del día tratados en ella"
+    },
+    "attributes" : [ "object" ],
+    "id" : "154"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneVoto",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "tieneVoto",
+      "es" : "Tiene Voto"
+    },
+    "domain" : "52",
+    "comment" : {
+      "es" : "Indica el voto (a favor, en contra, etc) en una votación"
+    },
+    "attributes" : [ "object" ],
+    "id" : "152"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember",
+    "inverse" : "156",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl",
+    "range" : "117",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasMember",
+      "en" : "has member"
+    },
+    "domain" : "103",
+    "comment" : {
+      "undefined" : "A relation between collections and entities, e.g. 'my collection of saxophones includes an old Adolphe Sax original alto' (i.e. my collection has member an Adolphe Sax alto)."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "155"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esComisionDe",
+    "inverse" : "113",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "esComisionDe",
+      "es" : "Es Comisión De"
+    },
+    "domain" : "56",
+    "comment" : {
+      "es" : "Indica la comisión a la que pertenece un representante ciudadano"
+    },
+    "attributes" : [ "object" ],
+    "id" : "159"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#fechaInicio",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "fechaInicio",
+      "es" : "Fecha de Inicio"
+    },
+    "domain" : "50",
+    "comment" : {
+      "es" : "Fecha que indica cuando un representante inicia sus labores dentro de una comisión, o un concejal inicia su período de portavocía."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "160"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneTipoDocumento",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "132",
+    "label" : {
+      "IRI-based" : "tieneTipoDocumento",
+      "es" : "Tipo de documento"
+    },
+    "domain" : "64",
+    "comment" : {
+      "es" : "Indica el tipo de un documento"
+    },
+    "attributes" : [ "object" ],
+    "id" : "133"
+  }, {
+    "range" : "89",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "161"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneParticipante",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "tieneParticipante",
+      "es" : "Tiene Participante"
+    },
+    "domain" : "2",
+    "comment" : {
+      "es" : "Relación que indica que representantes ciudadanos participan en un debate"
+    },
+    "attributes" : [ "object" ],
+    "id" : "162"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esProcedimientoDe",
+    "inverse" : "34",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "esProcedimientoDe",
+      "es" : "Es Procedimiento De"
+    },
+    "domain" : "0",
+    "comment" : {
+      "es" : "Relaciona un procedimiento con los expedientes que tienen un tipo determinado de procedimiento"
+    },
+    "attributes" : [ "object" ],
+    "id" : "163"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#cargo",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "81",
+    "label" : {
+      "IRI-based" : "cargo",
+      "es" : "Cargo"
+    },
+    "domain" : "29",
+    "comment" : {
+      "es" : "Cargo que desempeña un funcionario público"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "164"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esCaracterDe",
+    "inverse" : "112",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "esCaracterDe",
+      "es" : "Es carácter de"
+    },
+    "domain" : "99",
+    "comment" : {
+      "es" : "Relaciona una sesión del pleno con el tipo de carácter, pudiendo ser este ordinario, extraordinario o extraordinario urgente"
+    },
+    "attributes" : [ "object" ],
+    "id" : "165"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#participante",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "participante",
+      "es" : "Participante"
+    },
+    "domain" : "3",
+    "comment" : {
+      "es" : "Relaciona un ciudadano con un punto del orden del día en el que ha participado"
+    },
+    "attributes" : [ "object" ],
+    "id" : "126"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esAccesibilidadDe",
+    "inverse" : "167",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "157",
+    "label" : {
+      "IRI-based" : "esAccesibilidadDe",
+      "es" : "Es Accesibilidad De"
+    },
+    "domain" : "142",
+    "comment" : {
+      "es" : "Indica la accesibilidad relacionada a una sesión del Pleno o un Entregable"
+    },
+    "attributes" : [ "object" ],
+    "id" : "166"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esParticipanteEn",
+    "inverse" : "162",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "esParticipanteEn",
+      "es" : "Es Participante En"
+    },
+    "domain" : "18",
+    "comment" : {
+      "es" : "Permite indicar un representante ciudadano que participa en el Debate de un punto del orden del día"
+    },
+    "attributes" : [ "object" ],
+    "id" : "168"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#tieneAccesibilidad",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "142",
+    "label" : {
+      "IRI-based" : "tieneAccesibilidad",
+      "es" : "Tiene Accesibilidad"
+    },
+    "domain" : "158",
+    "comment" : {
+      "es" : "Indica la accesibilidad relacionada a una sesión del Pleno o un Entregable"
+    },
+    "attributes" : [ "object" ],
+    "id" : "167"
+  }, {
+    "iri" : "http://purl.org/dc/terms/isFormatOf",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "isFormatOf",
+      "es" : "Es Formato De"
+    },
+    "domain" : "123",
+    "comment" : {
+      "es" : "Indica los formatos de archivos que tiene un documento"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "136"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#esParteDe",
+    "inverse" : "154",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "esParteDe",
+      "es" : "Es parte de"
+    },
+    "domain" : "3",
+    "comment" : {
+      "es" : "Relaciona un punto del orden del día con la sesión en la que fue tratado"
+    },
+    "attributes" : [ "object" ],
+    "id" : "169"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#fechaCierre",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "fechaCierre",
+      "es" : "Fecha de cierre"
+    },
+    "domain" : "15",
+    "comment" : {
+      "es" : "Fecha en la que se finalizó un expediente"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "170"
+  }, {
+    "iri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#numero",
+    "baseIri" : "http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "numero",
+      "es" : "Número"
+    },
+    "domain" : "3",
+    "comment" : {
+      "es" : "Número de un punto del orden del día"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "171"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl",
+    "range" : "103",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isMemberOf",
+      "en" : "is member of"
+    },
+    "domain" : "117",
+    "comment" : {
+      "en" : "A relation between collections and entities, e.g. 'my collection of saxophones includes an old Adolphe Sax original alto' (i.e. my collection has member an Adolphe Sax alto)."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "156"
+  } ]
+}
