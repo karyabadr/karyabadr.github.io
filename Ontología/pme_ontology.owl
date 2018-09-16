@@ -1,20 +1,21 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.civichackers.cc/def/plenosMunicipalesEspaña/pme_ontology#"
+     xml:base="http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.civichackers.cc/def/plenosMunicipalesEspaña/pme_ontology#">
-    <Prefix name="" IRI="http://www.civichackers.cc/def/plenosMunicipalesEspaña/pme_ontology#"/>
+     ontologyIRI="http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#">
+    <Prefix name="" IRI="http://www.civichackers.cc/def/plenosMunicipalesEspaña/pmeOntology#"/>
     <Prefix name="ns" IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="pav" IRI="http://www.civichackers.cc/def/plenosAyuntamiento/pav_ontology#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="pme_ontology" IRI="http://www.civichackers.cc/def/plenosMunicipalesEspaña/pme_ontology#"/>
     <Prefix name="cpannotationschema" IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"/>
     <Import>http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl</Import>
     <Annotation>
@@ -38,28 +39,31 @@
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ontología que modela elementos de un pleno municipal</Literal>
     </Annotation>
     <Declaration>
-        <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
+        <ObjectProperty IRI="tieneAsociado"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="tieneRepresentante"/>
+        <NamedIndividual IRI="valencia/valencia/expediente/009/E-01801-2017-001547-00"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="gestionadoPor"/>
+        <Class abbreviatedIRI="foaf:Document"/>
     </Declaration>
     <Declaration>
-        <Class IRI="TipoComision"/>
+        <Class IRI="PuntoOrdenDia"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="perfil"/>
+        <DataProperty abbreviatedIRI="foaf:name"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#agenciaDeColocacionDelAyuntamientoDeValenciaSolicitudDeDemandaDeE"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="esParteDe"/>
+        <NamedIndividual IRI="Adquisiciones"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="tieneTipoComision"/>
+        <ObjectProperty abbreviatedIRI="pme_ontology:esParteDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tieneTipoExpediente"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#Ordinaria"/>
@@ -68,52 +72,46 @@
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto#Abstencion"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="tieneTipoPunto"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#QuedarEnterado"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="PuntoOrdenDia"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#ExtraordinariaUrgente"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="tieneEstado"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="perteneceA"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto#EnContra"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="fechaInicioPortavocia"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TipoPunto"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="junta"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#aprobacionDeResolucion"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="telefonoGrupoPolitico"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="esTipoPuntoDe"/>
     </Declaration>
     <Declaration>
-        <Class IRI="CaracterSesion"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#ExtraordinariaUrgente"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="esTipoDocumentoDe"/>
+        <ObjectProperty abbreviatedIRI="pme_ontology:tieneEstado"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto#EnContra"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#aprobacionDeResolucion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Notificacion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tieneRepresentante"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="RedesSociales"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tieneModoAcceso"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="retransmision"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tieneEstado"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#sinEspecificar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aportadoPor"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="terms:date"/>
@@ -122,22 +120,43 @@
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#modificaciónDeLosDatosPersonalesQueAparecenEnLaSedeElectronica"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="fechaFinEnComision"/>
+        <Class IRI="TipoPunto"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="enlcaceDebate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Enmienda"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#autorizacionObrasEnUnPuestoDeMercadoMunicipalDeDistrito"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="esTipoDocumentoDe"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#declaracionInstitucional"/>
     </Declaration>
     <Declaration>
-        <Class IRI="GrupoPolitico"/>
+        <ObjectProperty IRI="tieneTipoComision"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Presencial"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="estudia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="valencia/valencia/votacion/28062018/009/d6785345t/001"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Votacion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Boletin"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="terms:hasFormat"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="retransmision"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://geo.linkeddata.es/ontology/Provincia"/>
@@ -146,46 +165,37 @@
         <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl#Agent"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#subenciones_para_la_realizacion_de_proyectos_de_innovacion_social_2016"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reclamacionDeResponsabilidadPatrimonial"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#conPropuesta"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="tieneTipoExpediente"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#AprobadaPropuestaAlternativa"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Procedimiento"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="tienePortavoz"/>
+        <NamedIndividual IRI="EnLinea"/>
     </Declaration>
     <Declaration>
         <Class IRI="EstadoPuntoOD"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="retransmisionDebate"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#subenciones_para_la_realizacion_de_proyectos_de_innovacion_social_2016"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#conPropuesta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reclamacionDeResponsabilidadPatrimonial"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="sustenta"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="tieneAsociado"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#AprobadaPropuestaAlternativa"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://xmlns.com/foaf/0.1/lastName"/>
+        <DataProperty abbreviatedIRI="foaf:lastName"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <Class abbreviatedIRI="foaf:Person"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://purl.org/dc/dcmitype/Software"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ComisionRepresentante"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#subencionDerivadaDeConvenioDeAutogestion"/>
@@ -197,37 +207,28 @@
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#recursos"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="asunto"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#solicitudDeInformacion"/>
+        <ObjectProperty IRI="tieneVoto"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#autorizacionDeDependienteParaEjercerLaVentaEnUnPuestoDeMercado"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#solicitudDeInformacion"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="terms:isFormatOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="archiva"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="tieneDebate"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="tieneTipoProcedimiento"/>
+        <Class IRI="Expediente"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="terms:created"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="terms:alternative"/>
+        <Class IRI="CaracterSesion"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="tieneMunicipio"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="esPortavozDe"/>
+        <NamedIndividual IRI="valencia/valencia/software/gestiona"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#ruego"/>
@@ -236,37 +237,49 @@
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#solicitudDeArbitrajeDeConsumo"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="esVotacionDe"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#otro"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#otro"/>
+        <ObjectProperty IRI="tieneMunicipio"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#renunciaALaTitularidadDeUnPuestoEnUnMercadoMunicipalDeDistrito"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Alcalde"/>
+        <NamedIndividual IRI="ComisionCuentas"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="fechaInicioEnComision"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="terms:title"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#PreguntaContestada"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="aportadoPor"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://dbpedia.org/ontology/population"/>
+        <NamedIndividual IRI="valencia/valencia/sesionpleno/28062018"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="fechaAlta"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="estudia"/>
+        <DataProperty abbreviatedIRI="terms:title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Alcalde"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#PreguntaContestada"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tieneDebate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Alegaciones"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://dbpedia.org/ontology/population"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="XLSX"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tieneTipoProcedimiento"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tratadoPor"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto#AFavor"/>
@@ -275,187 +288,250 @@
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#transferencia_mortis_causa_del_derecho_de_ocupacion_de_un_puesto_en_un_mercado"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#itinerarioParaLaCreacionyConsolidacionDeEmpresas"/>
+        <DataProperty IRI="perfil"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="parteResolutiva"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#Aprobado"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="esProcedimientoDe"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="enlaceActa"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#SobreLaMesa"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#declaracionDeUrgencia"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="tieneSesion"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="esComisionDe"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="tratadoPor"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="titulo"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#Extraordinaria"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="tieneVoto"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#publicacionEnElTablonDeEdictosDelAyuntamientoDeValencia"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="esEstadoDe"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reclamacionesYQuejas"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#AContestarEnProximaSesion"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Portavoz"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Funcionario"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#alegaciones"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ModoAcceso"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="numeroExpediente"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#valenciaActivaEmplea2017"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://geo.linkeddata.es/ontology/Municipio"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="tieneVotante"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#itinerarioParaLaCreacionyConsolidacionDeEmpresas"/>
     </Declaration>
     <Declaration>
         <Class IRI="Ciudadano"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <ObjectProperty IRI="tieneVotante"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoComision#NoPermanente"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#SobreLaMesa"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Asociacion"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#respuestaDePregunta"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Accesibilidad"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="asociadoA"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#transferenciaInterVivosDelDerechoDeOcupacionDeUnPuestoEnUnMercado"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#solicitudDeHojasDeReclamacionesDeConsumoPorLosEmpresariosComerc"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="tieneMiembro"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="unidadAdministrativa"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="terms:hasVersion"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="participante"/>
+        <ObjectProperty IRI="tieneTipoPunto"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="fechaFinRepresentacion"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#peticionDeCopiasyCertificacionesDeAcuerdos"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#declaracionDeUrgencia"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="tieneCaracter"/>
+        <NamedIndividual IRI="Web"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#subencionesParaLaPromocionDelTurismoDeComprasDirigidasAComercios"/>
+        <DataProperty IRI="asunto"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="gestiona"/>
+        <DataProperty IRI="fechaInicio"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reclamacionesoDenunciasEnMateriaDeConsumo"/>
+        <ObjectProperty IRI="esParteDe"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#altayMantenimientoEnFicheroDeAcreedoresCesionariosPersonalPropio"/>
+        <Class IRI="Funcionario"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Portavoz"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="valencia/valencia/persona/d6785345t"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#Extraordinaria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MensajeriaInstantanea"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#publicacionEnElTablonDeEdictosDelAyuntamientoDeValencia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#AContestarEnProximaSesion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reclamacionesYQuejas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Comunicacion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="esComisionDe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Iniciativa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#alegaciones"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="valencia/valencia/votacion/28062018/009/r7898760p/003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="titulo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="enlaceActa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="PDF"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#valenciaActivaEmplea2017"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="esEstadoDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="participante"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="esPortavozDe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geo.linkeddata.es/ontology/Municipio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ModoAcceso"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="asociadoA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="archiva"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="numeroExpediente"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
     </Declaration>
     <Declaration>
         <Class IRI="SesionPleno"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="archivadoEn"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoComision#NoPermanente"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="esModoAccesoDe"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#respuestaDePregunta"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="esVotanteEn"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="sustentadoPor"/>
+        <Class IRI="RepresentanteCiudadano"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="tieneAccesibilidad"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#traspasoDePuestoDeVentaEnUnMercadoMunicipalDeDistrito"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="adscrito_a"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="owl:sameAs"/>
+        <ObjectProperty IRI="esAccesibilidadDe"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="participaEn"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#cambioDelEpigrafeDeVentaEnPuestosDeLosMercadosMunicipalesDeDistrito"/>
+        <ObjectProperty IRI="gestiona"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#transferenciaInterVivosDelDerechoDeOcupacionDeUnPuestoEnUnMercado"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tieneSesion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#solicitudDeHojasDeReclamacionesDeConsumoPorLosEmpresariosComerc"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="esProcedimientoDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="esEntregableDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="esMunicipioDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="sustentadoPor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:hasVersion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="esModoAccesoDe"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="tienePuntoOD"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#peticionDeCopiasyCertificacionesDeAcuerdos"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="pme_ontology:tieneCaracter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="valencia/valencia/votacion/28062018/009/y4935731z/002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#subencionesParaLaPromocionDelTurismoDeComprasDirigidasAComercios"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tieneVotacion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="TXT"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TipoDocumento"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reclamacionesoDenunciasEnMateriaDeConsumo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="nombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="fechaCierre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tieneAccesibilidad"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="AdscritoA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#altayMantenimientoEnFicheroDeAcreedoresCesionariosPersonalPropio"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPart"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ComisionInformativa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#traspasoDePuestoDeVentaEnUnMercadoMunicipalDeDistrito"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:sameAs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#cambioDelEpigrafeDeVentaEnPuestosDeLosMercadosMunicipalesDeDistrito"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#modificacion_tarifas_de_mercados_autogestionados"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="tieneComision"/>
+        <ObjectProperty IRI="archivadoEn"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#agenciaDeColocacionDelAyuntamientoDeValenciaTratamientoDeOfertasDe"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="esMiembroDe"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#abonoaAsociacionesDeMercadosAutogestionadosDeDeudasDeAntiguosTit"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#abonoaAsociacionesDeMercadosAutogestionadosDeDeudasDeAntiguosTit"/>
+        <NamedIndividual IRI="valencia/valencia/puntoOD/28062018/009"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="esVotacionDe"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#ayudasMunicipalesValenciaActivaImpulsEconomic2017"/>
@@ -464,43 +540,61 @@
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#pregunta"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="tiene_integrante"/>
+        <ObjectProperty IRI="difundidoPor"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#Permanente"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Asociacion"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#Rechazado"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="descripcion"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="telefono"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="difundidoPor"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="esDebateDe"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="RepresentanteCiudadano"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="esCaracterDe"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="tieneParticipante"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="esParticipanteEn"/>
+        <NamedIndividual IRI="Transcripcion"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="fechaFinPortavocia"/>
+        <ObjectProperty IRI="esCaracterDe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Certificado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Accesibilidad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="valencia/valencia/documento/doc001"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="esDebateDe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Procedimiento"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ComisionDeUIV"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="valencia/valencia/documento/doc002"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="esRepresentanteDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tieneMiembro"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#sugerencias"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aporta"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="esMiembroDe"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#darCuenta"/>
@@ -509,16 +603,19 @@
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#becasDeFormacionEnElMarcoDelProgramaDePracticasFormativasParaJovenes"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ComisionRepresentante"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="http://dbpedia.org/ontology#isPartOf"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Expediente"/>
+        <NamedIndividual IRI="Informe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="esParticipanteEn"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#realizacionDeActividadExtraordinariaEnUnMercadoMunicipalDeDistrito"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tieneTipoDocumento"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#denuncias"/>
@@ -527,127 +624,142 @@
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#ejercicioDelDerechoDePeticion"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="aporta"/>
+        <ObjectProperty IRI="tieneComision"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="esRepresentanteDe"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="esEntregableDe"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#expedicionDeCarneDeVendedoraDeMercadoMunicipalDeDistrito"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#actividadDeDegustacionEnPuestoDeMercadoMunicipal"/>
+        <DataProperty IRI="fechaFin"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="esTipoComisionDe"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Votacion"/>
+        <NamedIndividual IRI="valencia/valencia/persona/y4935731z"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#aprobacionDelActa"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Voto"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="numero"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="terms:FileFormat"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="tieneTipoDocumento"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="enlcaceDebate"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#autorizacionDeUsoTemporalDeLosDespachosLocalesUbicadosEnElCentro"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="fechaInicioRepresentacion"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Comision"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="generaEntregable"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasPart"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="correo"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="tieneModoAcceso"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="extension"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="difunde"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#certificadoDeInscripcionEnLaAgenciaDeColocacionaPunt"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TipoDocumento"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="nombreAsociacion"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#ayudasSeedVlcemprende2014"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="fecha"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#mocion"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#mocionUrgente"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="esVotoDe"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Concejal"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="cargo"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#expedicionDeCarneDeVendedoraDeMercadoMunicipalDeDistrito"/>
     </Declaration>
     <Declaration>
         <Class IRI="MedioDifusión"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#actividadDeDegustacionEnPuestoDeMercadoMunicipal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="descripcion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#aprobacionDelActa"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="terms:FileFormat"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="generaEntregable"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="correo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#autorizacionDeUsoTemporalDeLosDespachosLocalesUbicadosEnElCentro"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tienePortavoz"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="esVotoDe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="valencia/valencia/persona/r7898760p"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="cargo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ComisionFinanciera"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="LenguajeDeSignos"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tieneCaracter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#certificadoDeInscripcionEnLaAgenciaDeColocacionaPunt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Voto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="GrupoPolitico"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#ayudasSeedVlcemprende2014"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#mocion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Comision"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Debate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#mocionUrgente"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="difunde"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#AprobadoConEnmienda"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="fechaCierre"/>
+        <ObjectProperty IRI="perteneceA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="gestionadoPor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="LecturaFacil"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="AudioDescripcion"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="terms:"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="ActaRecepcion"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#gestionDeLaRepresentacionElectronicaParaGestionesaTravesDeInternet"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="esAccesibilidadDe"/>
+        <Class IRI="TipoComision"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="numero"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Entregable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Concejal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="unidadAdministrativa"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#modificacionDeHorarioDeAperturaEnUnMercadoMunicipalDeDistrito"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="esTipoExpedienteDe"/>
+        <Class IRI="Documento"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TipoExpediente"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#reparacionDeDeficienciasEnViaPublicaServicioValenciaSiempreNueva"/>
@@ -656,7 +768,10 @@
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#accesoaLaInformacionDeLaLeyDeTransparencia"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Entregable"/>
+        <ObjectProperty IRI="esTipoExpedienteDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="TieneIntegrante"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="terms:license"/>
@@ -665,33 +780,18 @@
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#aportaciónDeDocumentaciónaSolicitudesExpedientesYaEnTrámitePorElAyuntamiento"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Documento"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#ayudasMunicipalesValenciaActivaEmpren2017"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Debate"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TipoExpediente"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="esMunicipioDe"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/TipoPunto#interpelacion"/>
     </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="esCRde"/>
-    </Declaration>
     <EquivalentClasses>
         <Class IRI="Documento"/>
-        <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
+        <Class abbreviatedIRI="foaf:Document"/>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl#Agent"/>
-        <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
+        <Class abbreviatedIRI="foaf:Agent"/>
     </EquivalentClasses>
     <SubClassOf>
         <Class IRI="Alcalde"/>
@@ -699,7 +799,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Ciudadano"/>
-        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <Class abbreviatedIRI="foaf:Person"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Concejal"/>
@@ -711,7 +811,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Funcionario"/>
-        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <Class abbreviatedIRI="foaf:Person"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="GrupoPolitico"/>
@@ -719,15 +819,171 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="RepresentanteCiudadano"/>
-        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <Class abbreviatedIRI="foaf:Person"/>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="Alcalde"/>
         <Class IRI="Concejal"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="TipoExpediente"/>
+        <NamedIndividual IRI="ActaRecepcion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="TipoExpediente"/>
+        <NamedIndividual IRI="Adquisiciones"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="TipoExpediente"/>
+        <NamedIndividual IRI="Alegaciones"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Accesibilidad"/>
+        <NamedIndividual IRI="AudioDescripcion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="MedioDifusión"/>
+        <NamedIndividual IRI="Boletin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="TipoDocumento"/>
+        <NamedIndividual IRI="Certificado"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Comision"/>
+        <NamedIndividual IRI="ComisionCuentas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Comision"/>
+        <NamedIndividual IRI="ComisionDeUIV"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Comision"/>
+        <NamedIndividual IRI="ComisionFinanciera"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Comision"/>
+        <NamedIndividual IRI="ComisionInformativa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="TipoDocumento"/>
+        <NamedIndividual IRI="Comunicacion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="ModoAcceso"/>
+        <NamedIndividual IRI="EnLinea"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="TipoDocumento"/>
+        <NamedIndividual IRI="Enmienda"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="TipoDocumento"/>
+        <NamedIndividual IRI="Informe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="TipoDocumento"/>
+        <NamedIndividual IRI="Iniciativa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Accesibilidad"/>
+        <NamedIndividual IRI="LecturaFacil"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Accesibilidad"/>
+        <NamedIndividual IRI="LenguajeDeSignos"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="MedioDifusión"/>
+        <NamedIndividual IRI="MensajeriaInstantanea"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="TipoDocumento"/>
+        <NamedIndividual IRI="Notificacion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="terms:FileFormat"/>
+        <NamedIndividual IRI="PDF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="ModoAcceso"/>
+        <NamedIndividual IRI="Presencial"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="MedioDifusión"/>
+        <NamedIndividual IRI="RedesSociales"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="terms:FileFormat"/>
+        <NamedIndividual IRI="TXT"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Accesibilidad"/>
+        <NamedIndividual IRI="Transcripcion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="MedioDifusión"/>
+        <NamedIndividual IRI="Web"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="terms:FileFormat"/>
+        <NamedIndividual IRI="XLSX"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="TipoPunto"/>
+        <NamedIndividual IRI="parteResolutiva"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="TipoPunto"/>
         <NamedIndividual IRI="titulo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Documento"/>
+        <NamedIndividual IRI="valencia/valencia/documento/doc001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Documento"/>
+        <NamedIndividual IRI="valencia/valencia/documento/doc002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Expediente"/>
+        <NamedIndividual IRI="valencia/valencia/expediente/009/E-01801-2017-001547-00"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Concejal"/>
+        <NamedIndividual IRI="valencia/valencia/persona/d6785345t"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Concejal"/>
+        <NamedIndividual IRI="valencia/valencia/persona/r7898760p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Concejal"/>
+        <NamedIndividual IRI="valencia/valencia/persona/y4935731z"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="PuntoOrdenDia"/>
+        <NamedIndividual IRI="valencia/valencia/puntoOD/28062018/009"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="SesionPleno"/>
+        <NamedIndividual IRI="valencia/valencia/sesionpleno/28062018"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/dc/dcmitype/Software"/>
+        <NamedIndividual IRI="valencia/valencia/software/gestiona"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Votacion"/>
+        <NamedIndividual IRI="valencia/valencia/votacion/28062018/009/d6785345t/001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Votacion"/>
+        <NamedIndividual IRI="valencia/valencia/votacion/28062018/009/r7898760p/003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Votacion"/>
+        <NamedIndividual IRI="valencia/valencia/votacion/28062018/009/y4935731z/002"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="CaracterSesion"/>
@@ -1033,22 +1289,282 @@
         <Class IRI="Voto"/>
         <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto#EnContra"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="terms:hasFormat"/>
+        <NamedIndividual IRI="valencia/valencia/documento/doc001"/>
+        <NamedIndividual IRI="PDF"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aportadoPor"/>
+        <NamedIndividual IRI="valencia/valencia/documento/doc001"/>
+        <NamedIndividual IRI="valencia/valencia/persona/r7898760p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="archivadoEn"/>
+        <NamedIndividual IRI="valencia/valencia/documento/doc001"/>
+        <NamedIndividual IRI="valencia/valencia/expediente/009/E-01801-2017-001547-00"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="sustenta"/>
+        <NamedIndividual IRI="valencia/valencia/documento/doc001"/>
+        <NamedIndividual IRI="valencia/valencia/puntoOD/28062018/009"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="tieneTipoDocumento"/>
+        <NamedIndividual IRI="valencia/valencia/documento/doc001"/>
+        <NamedIndividual IRI="Informe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="terms:hasFormat"/>
+        <NamedIndividual IRI="valencia/valencia/documento/doc002"/>
+        <NamedIndividual IRI="XLSX"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aportadoPor"/>
+        <NamedIndividual IRI="valencia/valencia/documento/doc002"/>
+        <NamedIndividual IRI="valencia/valencia/persona/y4935731z"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="archivadoEn"/>
+        <NamedIndividual IRI="valencia/valencia/documento/doc002"/>
+        <NamedIndividual IRI="valencia/valencia/expediente/009/E-01801-2017-001547-00"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="sustenta"/>
+        <NamedIndividual IRI="valencia/valencia/documento/doc002"/>
+        <NamedIndividual IRI="valencia/valencia/puntoOD/28062018/009"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="tieneTipoDocumento"/>
+        <NamedIndividual IRI="valencia/valencia/documento/doc002"/>
+        <NamedIndividual IRI="Informe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="archiva"/>
+        <NamedIndividual IRI="valencia/valencia/expediente/009/E-01801-2017-001547-00"/>
+        <NamedIndividual IRI="valencia/valencia/documento/doc001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="gestionadoPor"/>
+        <NamedIndividual IRI="valencia/valencia/expediente/009/E-01801-2017-001547-00"/>
+        <NamedIndividual IRI="valencia/valencia/software/gestiona"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="tieneTipoExpediente"/>
+        <NamedIndividual IRI="valencia/valencia/expediente/009/E-01801-2017-001547-00"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Procedimiento#sinEspecificar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="esParteDe"/>
+        <NamedIndividual IRI="valencia/valencia/puntoOD/28062018/009"/>
+        <NamedIndividual IRI="valencia/valencia/sesionpleno/28062018"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="tieneEstado"/>
+        <NamedIndividual IRI="valencia/valencia/puntoOD/28062018/009"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#Aprobado"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="tieneTipoPunto"/>
+        <NamedIndividual IRI="valencia/valencia/puntoOD/28062018/009"/>
+        <NamedIndividual IRI="parteResolutiva"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="tieneModoAcceso"/>
+        <NamedIndividual IRI="valencia/valencia/sesionpleno/28062018"/>
+        <NamedIndividual IRI="Presencial"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="tienePuntoOD"/>
+        <NamedIndividual IRI="valencia/valencia/sesionpleno/28062018"/>
+        <NamedIndividual IRI="valencia/valencia/puntoOD/28062018/009"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="pme_ontology:tieneCaracter"/>
+        <NamedIndividual IRI="valencia/valencia/sesionpleno/28062018"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#Ordinaria"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="esVotacionDe"/>
+        <NamedIndividual IRI="valencia/valencia/votacion/28062018/009/d6785345t/001"/>
+        <NamedIndividual IRI="valencia/valencia/puntoOD/28062018/009"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="tieneVotante"/>
+        <NamedIndividual IRI="valencia/valencia/votacion/28062018/009/d6785345t/001"/>
+        <NamedIndividual IRI="valencia/valencia/persona/d6785345t"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="tieneVoto"/>
+        <NamedIndividual IRI="valencia/valencia/votacion/28062018/009/d6785345t/001"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto#AFavor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="esVotacionDe"/>
+        <NamedIndividual IRI="valencia/valencia/votacion/28062018/009/r7898760p/003"/>
+        <NamedIndividual IRI="valencia/valencia/puntoOD/28062018/009"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="tieneVotante"/>
+        <NamedIndividual IRI="valencia/valencia/votacion/28062018/009/r7898760p/003"/>
+        <NamedIndividual IRI="valencia/valencia/persona/r7898760p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="tieneVoto"/>
+        <NamedIndividual IRI="valencia/valencia/votacion/28062018/009/r7898760p/003"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto#AFavor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="esVotacionDe"/>
+        <NamedIndividual IRI="valencia/valencia/votacion/28062018/009/y4935731z/002"/>
+        <NamedIndividual IRI="valencia/valencia/puntoOD/28062018/009"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="tieneVotante"/>
+        <NamedIndividual IRI="valencia/valencia/votacion/28062018/009/y4935731z/002"/>
+        <NamedIndividual IRI="valencia/valencia/persona/y4935731z"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="tieneVoto"/>
+        <NamedIndividual IRI="valencia/valencia/votacion/28062018/009/y4935731z/002"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/Voto#EnContra"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="pme_ontology:tieneCaracter"/>
+        <AnonymousIndividual nodeID="_:genid43"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/CaracterSesion#Ordinaria"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="pme_ontology:esParteDe"/>
+        <AnonymousIndividual nodeID="_:genid44"/>
+        <NamedIndividual IRI="valencia/valencia/sesionpleno/28062018"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="pme_ontology:tieneEstado"/>
+        <AnonymousIndividual nodeID="_:genid44"/>
+        <NamedIndividual IRI="http://www.civichackers.cc/resource/plenosAyuntamiento/pav_ontology/EstadoPuntoOD#Aprobado"/>
+    </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="terms:title"/>
         <NamedIndividual abbreviatedIRI="terms:"/>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DCMI Metadata Terms - other</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="terms:created"/>
+        <NamedIndividual IRI="valencia/valencia/documento/doc001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-15T13:21:14</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="nombre"/>
+        <NamedIndividual IRI="valencia/valencia/documento/doc001"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Plan de seguridad  vial</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="terms:created"/>
+        <NamedIndividual IRI="valencia/valencia/documento/doc002"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-18T13:25:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="nombre"/>
+        <NamedIndividual IRI="valencia/valencia/documento/doc002"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Financiamiento requerido</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="fechaAlta"/>
+        <NamedIndividual IRI="valencia/valencia/expediente/009/E-01801-2017-001547-00"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-21T11:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="numeroExpediente"/>
+        <NamedIndividual IRI="valencia/valencia/expediente/009/E-01801-2017-001547-00"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">E-01801-2017-001547-00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="foaf:lastName"/>
+        <NamedIndividual IRI="valencia/valencia/persona/d6785345t"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rodriguez</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="foaf:name"/>
+        <NamedIndividual IRI="valencia/valencia/persona/d6785345t"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Pablo Rodriguez</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="foaf:name"/>
+        <NamedIndividual IRI="valencia/valencia/persona/r7898760p"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Valentina Garcia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="foaf:lastName"/>
+        <NamedIndividual IRI="valencia/valencia/persona/y4935731z"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Perez</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="foaf:name"/>
+        <NamedIndividual IRI="valencia/valencia/persona/y4935731z"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Juan Perez</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="asunto"/>
+        <NamedIndividual IRI="valencia/valencia/puntoOD/28062018/009"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Propone la aprobación del Plan Director de Seguridad Vial de la Ciudad de València.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="numero"/>
+        <NamedIndividual IRI="valencia/valencia/puntoOD/28062018/009"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">009</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="terms:date"/>
+        <NamedIndividual IRI="valencia/valencia/sesionpleno/28062018"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2018-06-28T10:00:00+02:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="enlaceActa"/>
+        <NamedIndividual IRI="valencia/valencia/sesionpleno/28062018"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.valencia.es/ayuntamiento/plenos/OD_00001_20180628_1000_0_firmadoweb.pdf</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="retransmision"/>
+        <NamedIndividual IRI="valencia/valencia/sesionpleno/28062018"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">http://canal.gva.es/app/app.cfm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="foaf:name"/>
+        <NamedIndividual IRI="valencia/valencia/software/gestiona"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Gestiona</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="terms:date"/>
+        <AnonymousIndividual nodeID="_:genid43"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">2018-06-28 10:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="enlaceActa"/>
+        <AnonymousIndividual nodeID="_:genid43"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.valencia.es/ayuntamiento/plenos/OD_00001_20180628_1000_0_firmadoweb.pdf</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="asunto"/>
+        <AnonymousIndividual nodeID="_:genid44"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Propone la aprobación del Plan Director de Seguridad Vial de la Ciudad de València.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="asunto"/>
+        <AnonymousIndividual nodeID="_:genid45"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Propone la aprobación del Plan Director de Seguridad Vial de la Ciudad de València.</Literal>
     </DataPropertyAssertion>
     <InverseObjectProperties>
         <ObjectProperty IRI="http://dbpedia.org/ontology#isPartOf"/>
         <ObjectProperty IRI="hasPart"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty abbreviatedIRI="terms:isFormatOf"/>
+        <ObjectProperty abbreviatedIRI="terms:hasFormat"/>
         <ObjectProperty abbreviatedIRI="terms:isFormatOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="adscrito_a"/>
-        <ObjectProperty IRI="tiene_integrante"/>
+        <ObjectProperty IRI="AdscritoA"/>
+        <ObjectProperty IRI="TieneIntegrante"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="aporta"/>
@@ -1139,6 +1655,10 @@
         <ObjectProperty IRI="tieneTipoPunto"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="esVotacionDe"/>
+        <ObjectProperty IRI="tieneVotacion"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="esVotanteEn"/>
         <ObjectProperty IRI="tieneVotante"/>
     </InverseObjectProperties>
@@ -1166,12 +1686,6 @@
         <ObjectProperty IRI="sustenta"/>
         <ObjectProperty IRI="sustentadoPor"/>
     </InverseObjectProperties>
-    <TransitiveObjectProperty>
-        <ObjectProperty abbreviatedIRI="terms:hasFormat"/>
-    </TransitiveObjectProperty>
-    <TransitiveObjectProperty>
-        <ObjectProperty abbreviatedIRI="terms:isFormatOf"/>
-    </TransitiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://dbpedia.org/ontology#isPartOf"/>
         <Class IRI="Documento"/>
@@ -1185,8 +1699,12 @@
         <Class abbreviatedIRI="terms:FileFormat"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="adscrito_a"/>
+        <ObjectProperty IRI="AdscritoA"/>
         <Class IRI="RepresentanteCiudadano"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="TieneIntegrante"/>
+        <Class IRI="GrupoPolitico"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="aporta"/>
@@ -1222,10 +1740,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="esAccesibilidadDe"/>
         <Class IRI="Accesibilidad"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="esCRde"/>
-        <Class IRI="ComisionRepresentante"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="esCaracterDe"/>
@@ -1341,7 +1855,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="sustenta"/>
-        <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
+        <Class abbreviatedIRI="foaf:Document"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="sustentadoPor"/>
@@ -1427,16 +1941,16 @@
         <Class IRI="PuntoOrdenDia"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="tieneVotacion"/>
+        <Class IRI="PuntoOrdenDia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="tieneVotante"/>
         <Class IRI="Votacion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="tieneVoto"/>
         <Class IRI="Votacion"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="tiene_integrante"/>
-        <Class IRI="GrupoPolitico"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="tratadoPor"/>
@@ -1455,8 +1969,12 @@
         <Class IRI="Documento"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="adscrito_a"/>
+        <ObjectProperty IRI="AdscritoA"/>
         <Class IRI="GrupoPolitico"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="TieneIntegrante"/>
+        <Class IRI="RepresentanteCiudadano"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="aporta"/>
@@ -1495,10 +2013,6 @@
             <Class IRI="Entregable"/>
             <Class IRI="SesionPleno"/>
         </ObjectUnionOf>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="esCRde"/>
-        <Class IRI="Comision"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="esCaracterDe"/>
@@ -1618,7 +2132,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="sustentadoPor"/>
-        <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
+        <Class abbreviatedIRI="foaf:Document"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="tieneAccesibilidad"/>
@@ -1697,6 +2211,10 @@
         <Class IRI="TipoPunto"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="tieneVotacion"/>
+        <Class IRI="Votacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="tieneVotante"/>
         <Class IRI="RepresentanteCiudadano"/>
     </ObjectPropertyRange>
@@ -1705,19 +2223,31 @@
         <Class IRI="Voto"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="tiene_integrante"/>
-        <Class IRI="RepresentanteCiudadano"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="tratadoPor"/>
         <Class IRI="Comision"/>
     </ObjectPropertyRange>
-    <SubDataPropertyOf>
-        <DataProperty abbreviatedIRI="terms:alternative"/>
-        <DataProperty abbreviatedIRI="terms:title"/>
-    </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="terms:created"/>
+        <DataProperty abbreviatedIRI="terms:date"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="fechaAlta"/>
+        <DataProperty abbreviatedIRI="terms:date"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="fechaCierre"/>
+        <DataProperty abbreviatedIRI="terms:date"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="fechaFin"/>
+        <DataProperty abbreviatedIRI="terms:date"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="fechaFinRepresentacion"/>
+        <DataProperty abbreviatedIRI="terms:date"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="fechaInicio"/>
         <DataProperty abbreviatedIRI="terms:date"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
@@ -1725,16 +2255,15 @@
         <Class IRI="http://geo.linkeddata.es/ontology/Municipio"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="terms:alternative"/>
-        <Class IRI="Documento"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty abbreviatedIRI="terms:created"/>
         <Class IRI="Documento"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="terms:date"/>
-        <Class IRI="Documento"/>
+        <ObjectUnionOf>
+            <Class IRI="Documento"/>
+            <Class IRI="SesionPleno"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="terms:title"/>
@@ -1755,8 +2284,8 @@
         <DataProperty IRI="correo"/>
         <ObjectUnionOf>
             <Class IRI="GrupoPolitico"/>
-            <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
-            <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+            <Class abbreviatedIRI="foaf:Agent"/>
+            <Class abbreviatedIRI="foaf:Person"/>
         </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -1772,10 +2301,6 @@
         <Class IRI="Debate"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="fecha"/>
-        <Class IRI="SesionPleno"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="fechaAlta"/>
         <Class IRI="Expediente"/>
     </DataPropertyDomain>
@@ -1784,45 +2309,29 @@
         <Class IRI="Expediente"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="fechaFinEnComision"/>
-        <Class IRI="ComisionRepresentante"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="fechaFinPortavocia"/>
-        <Class IRI="Portavoz"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="fechaFinRepresentacion"/>
-        <Class IRI="RepresentanteCiudadano"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="fechaInicioEnComision"/>
+        <DataProperty IRI="fechaFin"/>
         <ObjectUnionOf>
             <Class IRI="ComisionRepresentante"/>
             <Class IRI="Portavoz"/>
         </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="fechaInicioPortavocia"/>
-        <Class IRI="Portavoz"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="fechaInicioRepresentacion"/>
+        <DataProperty IRI="fechaFinRepresentacion"/>
         <Class IRI="RepresentanteCiudadano"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="junta"/>
-        <Class IRI="Asociacion"/>
+        <DataProperty IRI="fechaInicio"/>
+        <ObjectUnionOf>
+            <Class IRI="ComisionRepresentante"/>
+            <Class IRI="Portavoz"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="nombreAsociacion"/>
+        <DataProperty IRI="nombre"/>
         <ObjectUnionOf>
             <Class IRI="http://geo.linkeddata.es/ontology/Municipio"/>
             <Class IRI="http://geo.linkeddata.es/ontology/Provincia"/>
-            <Class IRI="Asociacion"/>
-            <Class IRI="Comision"/>
-            <Class IRI="GrupoPolitico"/>
-            <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+            <Class IRI="http://purl.org/dc/dcmitype/Software"/>
         </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -1834,36 +2343,40 @@
         <Class IRI="Expediente"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="perfil"/>
+        <Class IRI="RepresentanteCiudadano"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="retransmision"/>
-        <Class IRI="SesionPleno"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="retransmisionDebate"/>
-        <Class IRI="Debate"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="telefonoGrupoPolitico"/>
-        <Class IRI="GrupoPolitico"/>
+        <ObjectUnionOf>
+            <Class IRI="Debate"/>
+            <Class IRI="SesionPleno"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="unidadAdministrativa"/>
         <Class IRI="Funcionario"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://xmlns.com/foaf/0.1/lastName"/>
-        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <DataProperty abbreviatedIRI="foaf:lastName"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="foaf:name"/>
+        <ObjectUnionOf>
+            <Class IRI="Asociacion"/>
+            <Class IRI="Comision"/>
+            <Class IRI="GrupoPolitico"/>
+            <Class abbreviatedIRI="foaf:Person"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="http://dbpedia.org/ontology/population"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty abbreviatedIRI="terms:alternative"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty abbreviatedIRI="terms:created"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI="terms:date"/>
@@ -1898,14 +2411,6 @@
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="extension"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="fecha"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="fechaAlta"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
@@ -1914,11 +2419,7 @@
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="fechaFinEnComision"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="fechaFinPortavocia"/>
+        <DataProperty IRI="fechaFin"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1926,23 +2427,11 @@
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="fechaInicioEnComision"/>
+        <DataProperty IRI="fechaInicio"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="fechaInicioPortavocia"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="fechaInicioRepresentacion"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="junta"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="nombreAsociacion"/>
+        <DataProperty IRI="nombre"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1962,23 +2451,15 @@
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="retransmisionDebate"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="telefono"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="telefonoGrupoPolitico"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="unidadAdministrativa"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://xmlns.com/foaf/0.1/lastName"/>
+        <DataProperty abbreviatedIRI="foaf:lastName"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="foaf:name"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <AnnotationAssertion>
@@ -1993,13 +2474,53 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>terms:alternative</AbbreviatedIRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Título alternativo asignado a un documento</Literal>
+        <IRI>http://dbpedia.org/ontology/population</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Población humana, (del latín tardío populatio, -ōnis, en latín &apos;saqueo&apos;, &apos;devastación&apos;) en geografía y sociología es el grupo de personas que viven en un área o espacio geográfico. Población biológica es el conjunto de individuos de la misma especie que habita una extensión determinada en un momento dado</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>terms:alternative</AbbreviatedIRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Alternativo</Literal>
+        <IRI>http://dbpedia.org/ontology/population</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Población</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://geo.linkeddata.es/ontology/Municipio</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Entidad administrativa que puede agrupar una sola localidad o varias, que puede hacer referencia a una ciudad, pueblo o aldea.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://geo.linkeddata.es/ontology/Municipio</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Municipio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://geo.linkeddata.es/ontology/Provincia</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Entidad subnacional por lo general inmediatamente inferior al Estado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://geo.linkeddata.es/ontology/Provincia</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Provincia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.org/dc/dcmitype/Software</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Equipamiento lógico o soporte lógico de un sistema informático, que comprende el conjunto de los componentes lógicos necesarios que hacen posible la realización de tareas específicas como almacenamiento y gestion de la documentación empleada en el punto del orden del día de una sesión del Pleno.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/dc/dcmitype/Software</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Software</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>terms:FileFormat</AbbreviatedIRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Formato de los archivos que forman parte del expediente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>terms:FileFormat</AbbreviatedIRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Formato de Archivo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:hasVersion"/>
@@ -2010,6 +2531,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>terms:created</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Date of creation of the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>terms:created</AbbreviatedIRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">fecha que indica cuando una persona crea un documento</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -2037,6 +2563,26 @@
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>terms:hasFormat</AbbreviatedIRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica los formatos de archivos que tiene un documento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>terms:hasFormat</AbbreviatedIRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tiene Formato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>terms:isFormatOf</AbbreviatedIRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica los formatos de archivos que tiene un documento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>terms:isFormatOf</AbbreviatedIRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Es Formato De</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:hasVersion"/>
         <AbbreviatedIRI>terms:title</AbbreviatedIRI>
         <IRI>http://dublincore.org/usage/terms/history/#titleT-002</IRI>
@@ -2058,18 +2604,38 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>pav:isMemberOf</AbbreviatedIRI>
+        <IRI>http://www.civichackers.cc/def/plenosAyuntamiento/pav_ontology#isMemberOf</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Inidca la pertenencia de una persona a un grupo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>pav:isMemberOf</AbbreviatedIRI>
+        <IRI>http://www.civichackers.cc/def/plenosAyuntamiento/pav_ontology#isMemberOf</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links one Political Group with its members</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>pav:isMemberOf</AbbreviatedIRI>
+        <IRI>http://www.civichackers.cc/def/plenosAyuntamiento/pav_ontology#isMemberOf</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">es miembro de</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Accesibilidad</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sistemas de accesibilidad relacionados al orden del día y al acta de la sesión del Pleno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Accesibilidad</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Accesibilidad</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>AdscritoA</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica que un representante ciudadano forma parte de un grupo político</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>AdscritoA</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Adscrito A</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2090,6 +2656,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Asociacion</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Asociación</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Boletin</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tablón de Anuncios</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2122,6 +2693,21 @@
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Comisión</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ComisionCuentas</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Comisión especial de cuentas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ComisionDeUIV</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Comisión de Urbanismo, Infraestructura y Vivienda</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ComisionInformativa</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Comisión Informativa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>ComisionRepresentante</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relación ternaria que indica que representantes forman parte de las diferentes comisiones y sus periodos</Literal>
@@ -2130,6 +2716,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>ComisionRepresentante</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Comisión - Representante</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Comunicacion</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Comunicación</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2160,6 +2751,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Documento</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Documento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Entregable</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Documento resultante de una sesión plenaria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Entregable</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Entregable</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2200,6 +2801,31 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>GrupoPolitico</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Grupo Político</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>LecturaFacil</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lectura Fácil</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>MedioDifusión</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Canal de comunicación de los eventos de una sesión plenaria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>MedioDifusión</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Medio de Difusión</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ModoAcceso</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Formas de acceder a una sesión del Pleno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ModoAcceso</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Modo de Acceso</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2250,6 +2876,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>SesionPleno</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sesión del Pleno del Ayuntamiento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TieneIntegrante</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica que un grupo político esta formado por representantes ciudadanos.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TieneIntegrante</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tiene Integrante</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2313,6 +2949,26 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>aporta</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica quíen aporta un documento como soporte a un punto del orden del día</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>aporta</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Aporta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>aportadoPor</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica quíen aporta un documento como soporte a un punto del orden del día</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>aportadoPor</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Aportado Por</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>archiva</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relaciona los expedientes con los documentos contenidos en este</Literal>
     </AnnotationAssertion>
@@ -2330,6 +2986,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>archivadoEn</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Archivado En</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>asociadoA</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica a que asociacíon pertenece un Ciudadano</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>asociadoA</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Asociado A</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2373,6 +3039,26 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>difunde</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica cómo o qué medio de difusión dió a conocer un entregable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>difunde</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Difunde</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>difundidoPor</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica el Entregable y su medio de difusión</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>difundidoPor</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Difundido por</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>enlaceActa</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Incluye la url del sitio web donde se encuentra publicada el acta generada a partir de una sesión del pleno del ayuntamiento</Literal>
     </AnnotationAssertion>
@@ -2393,13 +3079,13 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>esCRde</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relaciona una comisión con sus representantes y periodos</Literal>
+        <IRI>esAccesibilidadDe</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica la accesibilidad relacionada a una sesión del Pleno o un Entregable</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>esCRde</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Es comisión-representante de</Literal>
+        <IRI>esAccesibilidadDe</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Es Accesibilidad De</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2413,6 +3099,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>esComisionDe</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica la comisión a la que pertenece un representante ciudadano</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>esComisionDe</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Es Comisión De</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>esDebateDe</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relaciona un debate con un punto del orden del día</Literal>
     </AnnotationAssertion>
@@ -2420,6 +3116,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>esDebateDe</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Es debate de</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>esEntregableDe</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica qué entregable es producido como resultado de una sesión del pleno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>esEntregableDe</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Es Entregable De</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2440,6 +3146,26 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>esMiembroDe</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Es miembro de</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>esModoAccesoDe</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica las formas de acceso a una sesión plenaria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>esModoAccesoDe</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Es Modo de Acceso De</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>esMunicipioDe</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica que un municipio pertenece a una provincia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>esMunicipioDe</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Es municipio de</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2573,28 +3299,8 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>extension</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Número de extensión asociado a una persona</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>extension</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Número de extensión</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>fecha</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica la fecha en la que se desarrolló una sesión del pleno del ayuntamiento</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>fecha</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>fechaAlta</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha en la que se dió inicio a un expediente</Literal>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha en la que se abrió  un expediente</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2613,28 +3319,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>fechaFinEnComision</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha de finalización de pertenencia a una comisión</Literal>
+        <IRI>fechaFin</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha de Finalización de un período</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>fechaFinEnComision</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha fin</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>fechaFinPortavocia</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha de finalización como portavoz de un grupo político</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>fechaFinPortavocia</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha fin</Literal>
+        <IRI>fechaFin</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha de Finalización</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>fechaFinRepresentacion</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha de finalización como representante ciudadano</Literal>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha de finalización del período de un representante ciudadano</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2643,33 +3339,43 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>fechaInicioEnComision</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha de inicio de participación en una comisión del pleno del ayuntamiento</Literal>
+        <IRI>fechaInicio</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha que indica cuando un representante inicia sus labores dentro de una comisión, o un concejal inicia su período de portavocía.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>fechaInicioEnComision</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha de inicio</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>fechaInicioPortavocia</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha de inicio de como portavoz de un grupo político</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>fechaInicioPortavocia</IRI>
+        <IRI>fechaInicio</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha de Inicio</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>fechaInicioRepresentacion</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha de inicio de como representante ciudadano (sea Alcalde o Concejal)</Literal>
+        <IRI>generaEntregable</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica el entregable que ha sido generado por una sesión del pleno</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>fechaInicioRepresentacion</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fecha de inicio</Literal>
+        <IRI>generaEntregable</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Genera Entregable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>gestiona</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica qué software se emplea para la gestión de expedientes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>gestiona</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gestiona</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>gestionadoPor</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica qué software se emplea para la gestión de expedientes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>gestionadoPor</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Es Gestionado Por</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2683,23 +3389,13 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>junta</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nombre de la junta a la que pertenece una determinada asociación</Literal>
+        <IRI>nombre</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nombre propio de una entidad</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>junta</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Junta</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>nombreAsociacion</IRI>
+        <IRI>nombre</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nombre</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
-        <IRI>nombreAsociacion</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nombre de una entidad. Ejm: asociación o comisión o persona, etc.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2719,7 +3415,17 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>numeroExpediente</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Número de expediente</Literal>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Código de expediente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>parteResolutiva</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tipo de punto del orden del día</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>parteResolutiva</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Parte resolutiva</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2753,6 +3459,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>perteneceA</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relaciona una sesión del Pleno con el municipio que la desarrolla</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>perteneceA</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pertenece A</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>retransmision</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Retransmisión de una sesión de un pleno o de una parte de esta</Literal>
     </AnnotationAssertion>
@@ -2763,33 +3479,43 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>retransmisionDebate</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Retransmisión del debade de un punto del orden del día</Literal>
+        <IRI>sustenta</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica que un documento sustenta la decisión sobre un punto del orden del día.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>retransmisionDebate</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Retransmisión</Literal>
+        <IRI>sustenta</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sustenta</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>telefono</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Número telefónico de una persona</Literal>
+        <IRI>sustentadoPor</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica que la decisión sobre un punto del orden del día  se sustenta en cierto documento.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>telefono</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Número de teléfono</Literal>
+        <IRI>sustentadoPor</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sustentado Por</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>telefonoGrupoPolitico</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Número de teléfono correspondiente a un Grupo Político</Literal>
+        <IRI>tieneAccesibilidad</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica la accesibilidad relacionada a una sesión del Pleno o un Entregable</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>telefonoGrupoPolitico</IRI>
-        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Teléfono</Literal>
+        <IRI>tieneAccesibilidad</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tiene Accesibilidad</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>tieneAsociado</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica los ciudadanos que pertenecen a una asociación</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>tieneAsociado</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tiene Asociado</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2800,6 +3526,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>tieneCaracter</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tiene Carácter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>tieneComision</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica la comisión a la que pertenece un representante ciudadano</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>tieneComision</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tiene Comisión</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2820,6 +3556,36 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>tieneEstado</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tiene Estado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>tieneMiembro</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica los concejales que pertenecen a una determinada comisión</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>tieneMiembro</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tiene Miembro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>tieneModoAcceso</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica los modos de acceso que tiene una sesión plenaria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>tieneModoAcceso</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tiene Modo de Acceso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>tieneMunicipio</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica la provincia a la que pertenece el Municipio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>tieneMunicipio</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tiene municipio</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2860,6 +3626,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>tieneRepresentante</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Representante</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>tieneSesion</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica todas las sesiones del Pleno que se han desarrollado en un determinado municipio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>tieneSesion</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tiene Sesion</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2913,6 +3689,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>tieneVotacion</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica la votación realizada sobre un punto del orden del día</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>tieneVotacion</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tiene Votación</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>tieneVotante</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relación que indica que representantes ciudadanos participan en una votación</Literal>
     </AnnotationAssertion>
@@ -2920,6 +3706,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>tieneVotante</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tiene votante</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>tieneVoto</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indica el voto (a favor, en contra, etc) en una votación</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>tieneVoto</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tiene Voto</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2945,6 +3741,31 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>unidadAdministrativa</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Unidad Administrativa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>valencia/valencia/expediente/009/E-01801-2017-001547-00</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Expediente número E-01801-2017-001547-00</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>valencia/valencia/puntoOD/28062018/009</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Punto 009 de 28/06/2018 de Valencia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>valencia/valencia/sesionpleno/28062018</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sesión del pleno de Valencia del 28 de junio de 2018</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>valencia/valencia/software/gestiona</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gestiona</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>valencia/valencia/votacion/28062018/009/d6785345t/001</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Votacion sobre el punto 009 del pleno de 28/06/2018</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3338,6 +4159,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A relation between collections and entities, e.g. &apos;my collection of saxophones includes an old Adolphe Sax original alto&apos; (i.e. my collection has member an Adolphe Sax alto).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role</IRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Rol de un representante ciudadano en el pleno, ej. Alcalde, Concejal</Literal>
     </AnnotationAssertion>
@@ -3348,58 +4174,68 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://xmlns.com/foaf/0.1/Agent</IRI>
+        <AbbreviatedIRI>foaf:Agent</AbbreviatedIRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Una entidad, sea esta una persona, un grupo, un software o cualquiere objeto físico</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://xmlns.com/foaf/0.1/Agent</IRI>
+        <AbbreviatedIRI>foaf:Agent</AbbreviatedIRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Agente</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://xmlns.com/foaf/0.1/Document</IRI>
+        <AbbreviatedIRI>foaf:Document</AbbreviatedIRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cualquier documento físico o electrónico</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://xmlns.com/foaf/0.1/Document</IRI>
+        <AbbreviatedIRI>foaf:Document</AbbreviatedIRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Documento</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://xmlns.com/foaf/0.1/Person</IRI>
+        <AbbreviatedIRI>foaf:Person</AbbreviatedIRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Clase que describe una persona</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://xmlns.com/foaf/0.1/Person</IRI>
+        <AbbreviatedIRI>foaf:Person</AbbreviatedIRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Person</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://xmlns.com/foaf/0.1/lastName</IRI>
+        <AbbreviatedIRI>foaf:lastName</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The last name of a person.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://xmlns.com/foaf/0.1/lastName</IRI>
-        <IRI>http://xmlns.com/foaf/0.1/</IRI>
+        <AbbreviatedIRI>foaf:lastName</AbbreviatedIRI>
+        <AbbreviatedIRI>foaf:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://xmlns.com/foaf/0.1/lastName</IRI>
+        <AbbreviatedIRI>foaf:lastName</AbbreviatedIRI>
         <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Apellido</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://xmlns.com/foaf/0.1/lastName</IRI>
+        <AbbreviatedIRI>foaf:lastName</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">lastName</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="ns:term_status"/>
-        <IRI>http://xmlns.com/foaf/0.1/lastName</IRI>
+        <AbbreviatedIRI>foaf:lastName</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>foaf:name</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A name for some thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>foaf:name</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nombre</Literal>
     </AnnotationAssertion>
 </Ontology>
 
