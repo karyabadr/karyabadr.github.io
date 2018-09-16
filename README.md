@@ -7,6 +7,10 @@ vez potencie la participación ciudadana en temáticas que afectan sus vidas dia
 
 [Ontología de Plenos Municipales ](https://karyabadr.github.io/Ontología/PME_Documentation/index-es.html)
 
+
+[Archivo OWL de la Ontología](https://karyabadr.github.io/Ontología/pme_ontology.owl)
+
+
 [Archivo RDF de la Ontología](https://karyabadr.github.io/Ontología/pme_ontology.rdf)
 
 
